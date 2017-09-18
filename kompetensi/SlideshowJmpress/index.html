@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>Slideshow with jmpress.js</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Slideshow with jmpress.js" />
+        <meta name="keywords" content="jmpress, slideshow, container, plugin, jquery, css3" />
+        <meta name="author" content="for Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<!--[if lt IE 9]>
+		<link rel="stylesheet" type="text/css" href="css/style_ie.css" />
+		<![endif]-->
+		<!-- jQuery -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<!-- jmpress plugin -->
+		<script type="text/javascript" src="js/jmpress.min.js"></script>
+		<!-- jmslideshow plugin : extends the jmpress plugin -->
+		<script type="text/javascript" src="js/jquery.jmslideshow.js"></script>
+		<script type="text/javascript" src="js/modernizr.custom.48780.js"></script>
+		<noscript>
+			<style>
+			.step {
+				width: 100%;
+				position: relative;
+			}
+			.step:not(.active) {
+				opacity: 1;
+				filter: alpha(opacity=99);
+				-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=99)";
+			}
+			.step:not(.active) a.jms-link{
+				opacity: 1;
+				margin-top: 40px;
+			}
+			</style>
+		</noscript>
+    </head>
+        <!-- No Backspace & Double Click-->
+	<script>
+		document.onkeydown = function (event) {
+			if (!event) { /* This will happen in IE */
+				event = window.event;
+			}
+			var keyCode = event.keyCode;
+			if (keyCode == 8 &&
+				((event.target || event.srcElement).tagName != "TEXTAREA") && 
+				((event.target || event.srcElement).tagName != "INPUT")) { 
+				if (navigator.userAgent.toLowerCase().indexOf("msie") == -1) {
+					event.stopPropagation();
+				} else {
+					alert("prevented");
+					event.returnValue = false;
+				}
+				return false;
+			}
+		};	
+	</script>
+    <script type="text/javascript">
+		document.ondblclick = function(evt) {
+    		if (window.getSelection)
+        		window.getSelection().removeAllRanges();
+ 		   else if (document.selection)
+      			document.selection.empty();
+				}
+	</script>
+    <!-- No Backspace & Double Click-->
+
+<body oncontextmenu="return false">
+<div id="wrapper" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;">
+
+
+    		<section id="jms-slideshow" class="jms-slideshow">
+				<div class="step" data-color="color-1">
+					<div class="jms-content">
+						<h3>Standar Kompetensi</h3>
+						<p>Siswa-siswi atau pebelajar diharapkan mampu memahami klasifikasi makhluk hidup berdasarkan pengelompokan <em>Kingdom/Regnum</em> oleh <em>R.H. Whittaker</em></p>
+						<a class="jms-link">Silahkan Menuju Slide Berikutnya ></a>
+					</div>
+					<img src="images/1.png" />
+				</div>
+				<div class="step" data-color="color-2" data-y="500" data-scale="0.4" data-rotate-x="30">
+					<div class="jms-content">
+						<h3>Kompetensi Dasar 1</h3>
+						<p>Mendeskripsikan klasifikasi makhluk hidup berdasarkan pengelompokan <em>5 Kingdom/Regnum</em>.</p>
+						<a class="jms-link">Silahkan Menuju Slide Berikutnya ></a>
+					</div>
+					<img src="images/2.png" />
+				</div>
+				<div class="step" data-color="color-3" data-x="2000" data-z="3000" data-rotate="170">
+					<div class="jms-content">
+						<h3>Kompetensi Dasar 2</h3>
+						<p>Menarik kesimpulan dari klasifikasi makhluk hidup berdasarkan pengelompokan <em>5 Kingdom/Regnum</em>.</p>
+						<a class="jms-link">Silahkan Menuju Slide Berikutnya ></a>
+					</div>
+					<img src="images/3.png" />
+				</div>
+				<div class="step" data-color="color-4" data-x="3000">
+					<div class="jms-content">
+						<h3>Indikator 1</h3>
+						<p>Siswa mampu mendeskripsikan setiap <em>Kingdom</em> secara singkat dan tepat minimal satu paragraf per <em>Kingdom</em> dalam 25 menit.</p>
+						<a class="jms-link">Silahkan Menuju Slide Berikutnya ></a>
+					</div>
+					<img src="images/4.png" />
+				</div>
+				<div class="step" data-color="color-5" data-x="4500" data-z="1000" data-rotate-y="45">
+					<div class="jms-content">
+						<h3>Indikator 2</h3>
+						<p>Siswa mampu menyimpulkan setidaknya satu paragraf penyebab adanya klasifikasi makhluk hidup berdasarkan <em>Whittaker</em> dalam waktu 10 menit.</p>
+						<a class="jms-link">Terimakasih Telah Membaca Syarat kompetensi</a>
+					</div>
+					<img src="images/5.png" />
+				</div>
+			</section>
+        </div>
+		<script type="text/javascript">
+			$(function() {
+			
+				$( '#jms-slideshow' ).jmslideshow();
+			});
+		</script>
+    </body>
+</html>
