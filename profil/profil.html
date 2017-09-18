@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <embed loop="false" src="sound/profil.mp3" hidden="true" type="audio/mpeg"></embed>
+
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<script language='JavaScript'>
+		var txt="Belajar Klasifikasi Makhluk Hidup ";
+		var kecepatan=300;var segarkan=null;function bergerak() { document.title=txt;
+		txt=txt.substring(1,txt.length)+txt.charAt(0);
+		segarkan=setTimeout("bergerak()",kecepatan);}bergerak();
+	</script>
+    <meta name="author" content="Riansyah R">
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#8B0000">
+
+    <!-- Base Style-->
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/jquery.poptrox.js"></script>
+    <script src="js/jquery.scrollzer.min.js"></script>
+    <script src="js/jquery.scrolly.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-layers.min.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/banner.js"></script>
+
+    <!-- Delay-->
+	<script type="text/javascript">
+	function delay (URL) {
+ 	   setTimeout( function() { window.location = URL }, 500 );
+	}
+	</script>
+    <!-- Delay-->
+
+
+    <!-- Animation-->
+	<style type="text/css" src="css/animations.css"></style>
+	<script src="js/wow.min.js"></script>
+  	<script>
+		 new WOW().init();
+	</script>  <script src="js/wow.min.js"></script>
+
+    <!-- No Backspace & Double Click-->
+	<script>
+		document.onkeydown = function (event) {
+			if (!event) { /* This will happen in IE */
+				event = window.event;
+			}
+			var keyCode = event.keyCode;
+			if (keyCode == 8 &&
+				((event.target || event.srcElement).tagName != "TEXTAREA") && 
+				((event.target || event.srcElement).tagName != "INPUT")) { 
+				if (navigator.userAgent.toLowerCase().indexOf("msie") == -1) {
+					event.stopPropagation();
+				} else {
+					alert("prevented");
+					event.returnValue = false;
+				}
+				return false;
+			}
+		};	
+	</script>
+    <script type="text/javascript">
+		document.ondblclick = function(evt) {
+    		if (window.getSelection)
+        		window.getSelection().removeAllRanges();
+ 		   else if (document.selection)
+      			document.selection.empty();
+				}
+	</script>
+    <!-- No Backspace & Double Click-->
+
+    <!-- Script HTML5 SoundFX -->
+    <script>
+	var html5_audiotypes={
+	"mp3": "audio/mpeg",
+	"mp4": "audio/mp4",
+	"ogg": "audio/ogg",
+	"wav": "audio/wav"
+	}
+	function createsoundbite(sound){
+		var html5audio=document.createElement('audio')
+		if (html5audio.canPlayType){ //check support for HTML5 audio
+			for (var i=0; i<arguments.length; i++){
+				var sourceel=document.createElement('source')
+				sourceel.setAttribute('src', arguments[i])
+				if (arguments[i].match(/\.(\w+)$/i))
+					sourceel.setAttribute('type', html5_audiotypes[RegExp.$1])
+				html5audio.appendChild(sourceel)
+			}
+			html5audio.load()
+			html5audio.playclip=function(){
+				html5audio.pause()
+				html5audio.currentTime=0
+				html5audio.play()
+			}
+			return html5audio
+		}
+		else{
+			return {playclip:function(){throw new Error("Your browser doesn't support 		HTML5 audio unfortunately")}}
+		}
+	}
+	var mouseoversound=createsoundbite("sound/whistle.ogg", "sound/whistle.mp3", "sound/whistle.wav")
+	var clicksound=createsoundbite("sound/click.ogg", "sound/click.mp3", "sound/click.wav")
+	</script>
+    <!-- Script HTML5 SoundFX -->
+    
+ 	<!-- Animation -->
+    <script src="js/wow.min.js"></script>
+	<script>
+		 new WOW().init();
+	</script>
+    <link rel="stylesheet" href="css/animations.css">
+ 	<!-- Animation -->
+
+	<noscript>
+        <link rel="stylesheet" href="css/skel.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/style-xlarge.css"/>
+	</noscript>
+
+</head>
+
+<body oncontextmenu="return false">
+<div id="wrapper" class="wow slideInDown" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;">
+
+    <!-- Header -->
+<section id="header" class="skel-layers-fixed wow slideInRight" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;">
+      <header>
+            <span class="image avatar">
+                <img
+                        src="images/avatar.png"/>
+            </span>
+            <h1><a href="javascript:delay('../petunjuk.html#two')" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()"><img src="images/menu.png" width="364" height="122" alt=""/></a></h1>
+      </header>
+        <nav id="nav">
+            <ul>
+                <li><a href="#one"  onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()" class="active">Profile</a></li>
+                <li><a href="#two"  onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()">FAQ (Frequently Asked Question)</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- Profile -->
+        <section id="one">
+            <div class="container">
+            <h5 align="center" class="wow zoomIn">&nbsp;</h5>
+            <h5 align="center" class="wow zoomIn">&nbsp;</h5>
+            <h5 align="center" class="wow zoomIn"><img src="images/profil.jpg" alt="" width="900"/></h5>
+          </div>
+		</section>
+
+		<!-- FAQ -->
+        <section id="two">
+            <div class="container">
+            <h3 align="center" class="wow zoomInUp">Pertanyaan Yang Sering Ditanyakan</h3>
+            <p>&nbsp;</p>
+						 <ol class="wow tada">
+                         <li>Berbasis apakah multimedia pembelajaran ini?<br>
+                         <strong>Jawab: </strong>Multimedia ini berbasis website menggunakan HTML5 dan CSS.</li>
+                         <li>Mengapa memilih multimedia pembelajaran berbasis website ini daripada berbasis flash?<br>
+                         <strong>Jawab: </strong>Basis website lebih mudah untuk dipelajari dan lebih fleksibel dalam membuat animasi dan konten. Selain itu pendistribusian program animasi ini menjadi lebih mudah yaitu bisa secara online (<em>hosting</em>) ataupun offline (<em>cd interaktif</em>).</li>
+                         <li>Apa landasan pembuatan atau pengembangan multimedia ini?<br>
+                         <strong>Jawab: </strong>Landasan pembuatan multimedia ini  berdasarkan situasi nyata dari materi yang ada pada sekolah kelas VII jenjang SMP di Yogyakarta. Sedangkan proses perancangan standar materi dilandasi dengan konsultasi bersama Dosen. Sumber materi didapatkan dari berbagai sumber buku, literatur, dan internet. Sedangkan uji coba tertutup sudah dilakukan oleh satu orang <em>evaluan</em>.</li>
+                         <li>Siapa sajakah yang terlibat dalam pembuatan multimedia ini?<br>
+                           <strong>Jawab: </strong>Saya adalah pengembang tunggal baik secara konten materi maupun teknis pembuatan program multimedia ini. Tetapi adapun persona yang terlibat secara tidak langsung meliputi Dosen Pembimbing Mata Kuliah &quot;Multimedia&quot; yaitu Dr. Christina Ismaniati, M.Pd. dan seorang evaluan yaitu siswi dari SMPN 5 Yogyakarta.</li>
+                         <li>Bagaimanakah standar materi dan kualitas isi media?<br>
+                           <strong>Jawab: </strong>Dipandang dari segi pengembang, keluasan cakupan materi (isi konten) dari media yang ingin disampaikan sudah cukup luas dan variatif. Selain itu juga  dioptimalkan agar sesuai dengan standar Kurikulum 2013.</li>
+	                </ol>            
+                    <p><h5 align="center" class="wow zoomInUp">Untuk Kembali ke Menu Utama, Klik Tombol "Kembali" Pada Kolom Navigasi di Sebelah Kanan Halaman Ini</h5>
+                    <p align="center">&nbsp;</p>
+                    </p>
+              <h5 align="center" class="wow flash" data-wow-iteration="1000" data-wow-duration="2s">TIPS: GUNAKAN TOMBOL &quot;CTRL + W&quot; PADA KEYBOARD UNTUK SELESAI ATAU KELUAR DARI PROGRAM</h5>
+          </div>
+		</section>
+        
+    <!-- Footer -->
+    <section id="footer">
+        <div class="container"> <ul class="copyright">
+          <li>© 2015 // Riansyah Rizky Poetra // 12105244001 // Teknologi Pendidikan | Originally layout by <a href="https://github.com/Thames1990/Webdesign-Multimedia">Thomas Mohr</a></li>
+        </ul>
+        </div>
+    </section>
+
+    <script language="javascript" type="text/javascript">
+        setBannerHeight()
+    </script>
+
+
+</div>
+</div>
+</body>
+</html>
