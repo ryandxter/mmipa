@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <embed loop="false" src="sound/materi.mp3" hidden="true" type="audio/mpeg"></embed>
+
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<script language='JavaScript'>
+		var txt="Belajar Klasifikasi Makhluk Hidup ";
+		var kecepatan=300;var segarkan=null;function bergerak() { document.title=txt;
+		txt=txt.substring(1,txt.length)+txt.charAt(0);
+		segarkan=setTimeout("bergerak()",kecepatan);}bergerak();
+	</script>
+    <meta name="author" content="Riansyah R">
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#FFD700">
+
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/jquery.poptrox.js"></script>
+    <script src="js/jquery.scrollzer.min.js"></script>
+    <script src="js/jquery.scrolly.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-layers.min.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/banner.js"></script>
+
+
+    <!-- Script HTML5 SoundFX -->
+    <script>
+	var html5_audiotypes={
+	"mp3": "audio/mpeg",
+	"mp4": "audio/mp4",
+	"ogg": "audio/ogg",
+	"wav": "audio/wav"
+	}
+	function createsoundbite(sound){
+		var html5audio=document.createElement('audio')
+		if (html5audio.canPlayType){ //check support for HTML5 audio
+			for (var i=0; i<arguments.length; i++){
+				var sourceel=document.createElement('source')
+				sourceel.setAttribute('src', arguments[i])
+				if (arguments[i].match(/\.(\w+)$/i))
+					sourceel.setAttribute('type', html5_audiotypes[RegExp.$1])
+				html5audio.appendChild(sourceel)
+			}
+			html5audio.load()
+			html5audio.playclip=function(){
+				html5audio.pause()
+				html5audio.currentTime=0
+				html5audio.play()
+			}
+			return html5audio
+		}
+		else{
+			return {playclip:function(){throw new Error("Your browser doesn't support 		HTML5 audio unfortunately")}}
+		}
+	}
+	var mouseoversound=createsoundbite("sound/whistle.ogg", "sound/whistle.mp3", "sound/whistle.wav")
+	var clicksound=createsoundbite("sound/click.ogg", "sound/click.mp3", "sound/click.wav")
+	</script>
+    <!-- Script HTML5 SoundFX -->
+
+    <!-- Delay-->
+	<script type="text/javascript">
+	function delay (URL) {
+ 	   setTimeout( function() { window.location = URL }, 500 );
+	}
+	</script>
+    <!-- Delay-->
+
+ 	<!-- Animation -->
+    <script src="js/wow.min.js"></script>
+	<script>
+		 new WOW().init();
+	</script>
+    <link rel="stylesheet" href="css/animations.css">
+ 	<!-- Animation -->
+
+    <!-- No Backspace & Double Click-->
+	<script>
+		document.onkeydown = function (event) {
+			if (!event) { /* This will happen in IE */
+				event = window.event;
+			}
+			var keyCode = event.keyCode;
+			if (keyCode == 8 &&
+				((event.target || event.srcElement).tagName != "TEXTAREA") && 
+				((event.target || event.srcElement).tagName != "INPUT")) { 
+				if (navigator.userAgent.toLowerCase().indexOf("msie") == -1) {
+					event.stopPropagation();
+				} else {
+					alert("prevented");
+					event.returnValue = false;
+				}
+				return false;
+			}
+		};	
+	</script>
+    <script type="text/javascript">
+		document.ondblclick = function(evt) {
+    		if (window.getSelection)
+        		window.getSelection().removeAllRanges();
+ 		   else if (document.selection)
+      			document.selection.empty();
+				}
+	</script>
+    <!-- No Backspace & Double Click-->
+    
+       	<noscript>
+        <link rel="stylesheet" href="css/skel.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/style-xlarge.css"/>
+		</noscript>
+
+</head>
+<!--
+<iframe src="news.html"
+width="40%" height="80"
+align="right">
+<p>See our <a href="news.html">newsflashes</a>.</p>
+</iframe>
+-->
+
+<body oncontextmenu="return false">
+<div id="wrapper" class="wow slideInRight" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;">
+
+<section id="header" class="skel-layers-fixed wow slideInRight" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;">
+    	<header>
+            <span class="image avatar">
+                <img
+                        src="images/avatar.png"/>
+            </span>
+            <h1><a href="javascript:delay('../petunjuk.html#two')" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()"><img src="images/menu.png" width="364" height="122" alt=""/></a></h1>
+      </header>
+        <nav id="nav">
+            <ul>
+                <li><a href="javascript:delay('kingdom/monera.html#one')" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()">Mengenal Kingdom Monera</a></li>
+                <li><a href="javascript:delay('kingdom/protista.html#one')" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()">Mengenal Kingdom Protista</a></li>
+                <li><a href="javascript:delay('kingdom/fungi.html#one')" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()">Mengenal Kingdom Fungi</a></li>
+                <li><a href="javascript:delay('kingdom/plantae.html#one')" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()">Mengenal Kingdom Plantae</a></li>
+                <li><a href="javascript:delay('kingdom/animalia.html#one')" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()">Mengenal Kingdom Animalia</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- Pengantar -->
+        <section id="one">
+            <div class="container">
+                    <h2 class="wow rollIn" align="center">Pengantar Materi</h2>
+                	<div class="features">
+                 	<p class="wow slideInRight" align="justify">Kamu sudah tahu kan apa itu makhluk hidup? Nah disini akan diterangkan pengelompokan makhluk hidup menurut <em>R.H. Whittaker. </em>Ia mengklasifikasikan (mengelompokkan) makhluk hidup menjadi 5 <em>Kingdom</em> yakni <em>Monera, Protista, Fungi, Plantae </em>dan<em> Animalia</em> pada tahun 1968.  <em>Whittaker</em> mengelompokkan berdasarkan tingkat organisme, kondisi inti sel dan nutrisinya.</p>
+                 	<p class="wow rotateInUpRight" align="justify">Dalam bahasa Inggris, <em>Kingdom </em>artinya 'kerajaan' namun dalam Ilmu Pengetahuan Alam Biologi berarti dunia makhluk hidup. <strong>Tahukah kamu mengapa perlu adanya klasifikasi makhluk hidup?</strong> Hal ini dilakukan untuk mempermudah ilmuwan dalam mempelajari kelas atau kelompok-kelompok makhluk hidup, sehingga berguna bagi ilmu pengetahuan manusia. Selain itu penting juga untuk kamu pelajari supaya menghargai dan turut melestarikan keanekaragaman hayati yang ada di sekitarmu.</p>
+                 	<p class="wow rotateInUpRight" align="justify">Nah, untuk mempelajari lebih lanjut, kamu bisa mulai memilih materi yang terletak di sebelah kanan halaman ini. Semangat belajar ya :)</p>
+                 	<p><h5 align="center" class="wow zoomInUp">&nbsp;</h5>
+                 	<h5 align="center" class="wow zoomInUp">Untuk Kembali ke Menu Utama, Klik Tombol "Kembali" Pada Kolom Navigasi di Sebelah Kanan Halaman Ini</h5>
+                 	</p>
+              </div>
+            </div>
+        </section>
+
+    <!-- Footer -->
+    <section id="footer">
+        <div class="container"> <ul class="copyright">
+          <li>© 2015 // Riansyah Rizky Poetra // 12105244001 // Teknologi Pendidikan | Originally layout by <a href="https://github.com/Thames1990/Webdesign-Multimedia">Thomas Mohr</a></li>
+        </ul>
+        </div>
+    </section>
+
+    <script language="javascript" type="text/javascript">
+        setBannerHeight()
+    </script>
+
+
+</div>
+</body>
+</html>
