@@ -1,0 +1,450 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
+	<script language='JavaScript'>
+		var txt="Belajar Klasifikasi Makhluk Hidup ";
+		var kecepatan=300;var segarkan=null;function bergerak() { document.title=txt;
+		txt=txt.substring(1,txt.length)+txt.charAt(0);
+		segarkan=setTimeout("bergerak()",kecepatan);}bergerak();
+	</script>
+    <meta name="author" content="Riansyah R">
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#B0E600">
+
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/jquery.poptrox.js"></script>
+    <script src="js/jquery.scrollzer.min.js"></script>
+    <script src="js/jquery.scrolly.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-layers.min.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/banner.js"></script>
+
+    <!-- Gallery-->
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<script src="js/modernizr.custom.js"></script>
+
+    <!-- No Backspace & Double Click-->
+	<script type="text/javascript">
+	function delay (URL) {
+ 	   setTimeout( function() { window.location = URL }, 500 );
+	}
+	</script>
+    <!-- No Backspace & Double Click-->
+
+    <!-- Delay-->
+	<script type="text/javascript">
+	function delay (URL) {
+ 	   setTimeout( function() { window.location = URL }, 500 );
+	}
+	</script>
+    <!-- Delay-->
+
+    <!-- Script HTML5 SoundFX -->
+    <script>
+	var html5_audiotypes={
+	"mp3": "audio/mpeg",
+	"mp4": "audio/mp4",
+	"ogg": "audio/ogg",
+	"wav": "audio/wav"
+	}
+	function createsoundbite(sound){
+		var html5audio=document.createElement('audio')
+		if (html5audio.canPlayType){ //check support for HTML5 audio
+			for (var i=0; i<arguments.length; i++){
+				var sourceel=document.createElement('source')
+				sourceel.setAttribute('src', arguments[i])
+				if (arguments[i].match(/\.(\w+)$/i))
+					sourceel.setAttribute('type', html5_audiotypes[RegExp.$1])
+				html5audio.appendChild(sourceel)
+			}
+			html5audio.load()
+			html5audio.playclip=function(){
+				html5audio.pause()
+				html5audio.currentTime=0
+				html5audio.play()
+			}
+			return html5audio
+		}
+		else{
+			return {playclip:function(){throw new Error("Your browser doesn't support 		HTML5 audio unfortunately")}}
+		}
+	}
+	var mouseoversound=createsoundbite("sound/whistle.ogg", "sound/whistle.mp3", "sound/whistle.wav")
+	var clicksound=createsoundbite("sound/click.ogg", "sound/click.mp3", "sound/click.wav")
+	</script>
+    <!-- Script HTML5 SoundFX -->
+
+ 	<!-- Animation -->
+    <script src="js/wow.min.js"></script>
+	<script>
+		 new WOW().init();
+	</script>
+    <link rel="stylesheet" href="css/animations.css">
+ 	<!-- Animation -->
+
+    <!-- No Backspace & Double Click-->
+	<script>
+		document.onkeydown = function (event) {
+			if (!event) { /* This will happen in IE */
+				event = window.event;
+			}
+			var keyCode = event.keyCode;
+			if (keyCode == 8 &&
+				((event.target || event.srcElement).tagName != "TEXTAREA") && 
+				((event.target || event.srcElement).tagName != "INPUT")) { 
+				if (navigator.userAgent.toLowerCase().indexOf("msie") == -1) {
+					event.stopPropagation();
+				} else {
+					alert("prevented");
+					event.returnValue = false;
+				}
+				return false;
+			}
+		};	
+	</script>
+    <script type="text/javascript">
+		document.ondblclick = function(evt) {
+    		if (window.getSelection)
+        		window.getSelection().removeAllRanges();
+ 		   else if (document.selection)
+      			document.selection.empty();
+				}
+	</script>
+    <!-- No Backspace & Double Click-->
+
+    <!-- Hide n Show-->
+	<script>
+	$(document).ready(function(){
+		$("tombol").click(function(){
+			$("xyz").toggle();
+		});
+	});
+	</script>
+	<script>
+	$(document).ready(function(){
+		$("tombol1").click(function(){
+			$("xyz1").toggle();
+		});
+	});
+	</script>
+	<script>
+	$(document).ready(function(){
+		$("tombol2").click(function(){
+			$("xyz2").toggle();
+		});
+	});
+	</script>
+    <script>
+	$(document).ready(function(){
+		$("tombol3").click(function(){
+			$("xyz3").toggle();
+		});
+	});
+	</script>    
+    <script>
+	$(document).ready(function(){
+		$("tombol4").click(function(){
+			$("xyz4").toggle();
+		});
+	});
+	</script>    
+    <!-- Hide n Show-->
+
+	<noscript>
+        <link rel="stylesheet" href="css/skel.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/style-xlarge.css"/>
+	</noscript>
+
+</head>
+<!--
+<iframe src="news.html"
+width="40%" height="80"
+align="right">
+<p>See our <a href="news.html">newsflashes</a>.</p>
+</iframe>
+-->
+
+<body oncontextmenu="return false">
+<div id="wrapper" class="wow fadeIn" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;">
+
+<section id="header" class="skel-layers-fixed wow slideInRight" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;">
+    	<header>
+            <span class="image avatar">
+                <img
+                        src="images/avatar.png"/>
+            </span>
+            <h1><a href="javascript:delay('../materi.html#one')" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()"><img src="images/menu.png" width="364" height="122" alt="Kembali Ke Menu Awal"/></a></h1>
+      </header>
+        <nav id="nav">
+            <ul>
+                <li><a href="#one" class="active" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()">Mengenal Kingdom Protista</a></li>
+                <li><tombol1><a href="#two" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()">Organisme <em>Protozoa</em></a></tombol1></li>
+                <li><tombol2><a href="#three" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()">Organisme <em>Algae</em></a></tombol2></li>
+                <li><tombol3><a href="#four" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()">Organisme <em>Myxomicota</em></a></tombol3></li>
+                <li><a href="#five" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()">Gallery & Video</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- Pengantar -->
+        <section id="one">
+            <div class="container">
+                    <h2 class="wow fadeInLeft" align="center">Yuk Mengenal Kingdom Protista</h2>
+                	<div class="features">
+                 	<p class="wow zoomIn" align="justify">Makhluk hidup dalam Kingdom Protista adalah organisme <em><strong>eukariota</strong></em> yang sebagian besar <strong><em>unicell</em></strong>, yaitu makhluk hidup ber-sel tunggal yang selnya memiliki membran inti. Sistem klasifikasi ini pertama kali dirintis oleh <strong>Ernst Haeckel (1834-1919)</strong>. Organisme yang termasuk Protista adalah <em>Protozoa, Algae,</em> dan <em>Myxomicota</em>. Adapun ciri-ciri organisme <em>Protista</em>, yaitu:</p>
+                    <ol class="wow zoomInDown">
+                         <li>Merupakan organisme <em>Eukariotik</em> atau mempunyai membran inti.</em></li>
+                         <li>Sebagian besar merupakan organisme <em>Unicell</em> atau terdiri dari sel tunggal.</li>
+                      <li>Sebagian  kecil merupakan organisme <em>Multicell</em> atau terdiri dari banyak sel, seperti <em>Algae</em>.</li>
+                         <li>Sebagian  besar <em>protista</em> hidup di air, beberapa di tanah lembab atau bahkan tubuh  manusia dan tanaman.</li>
+                         <li>Mereka  memiliki <em>mitokondria</em> untuk respirasi sel dan beberapa memiliki <em>kloroplas</em> untuk fotosintesis.</li>
+                         <li>Gerakan  organisme menggunakan <em>flagela</em> atau <em>silia</em>.</li>
+                         <li><em>Protista</em> bukan tanaman, hewan atau jamur.</li>
+                         <li>Berkembang  biak dengan <em>mitosis</em> dan beberapa mampu <em>meiosis</em> untuk reproduksi  seksual.</li>
+                         <li><em>Protista</em> adalah komponen utama plankton</li>
+                         <li><em>Protista</em> dapat menjadi <em>heterotrofik</em> atau <em>autotrofik</em>.</li>
+					</ol>
+                 	<h5 align="center" class="wow pulse" data-wow-duration="0.5s" data-wow-iteration="50" data-wow-delay="15s" align="justify"><strong>Tahukah kamu apakah itu yang dimaksud heterotrofik dan autotrofik? 
+                 	<tombol onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()"><u>Klik disini deh</u></tombol> kalau kepo :D</strong></h5>
+                    	<xyz style="display:none"><p><p align="justify">Yang dimaksud dengan <strong>heterotrofik</strong> adalah organisme yang tidak mampu menghasilkan makanannya sendiri sehingga hidup dengan memakan organisme lain. Sedangkan <strong>autotrofik</strong> adalah organisme yang mampu menghasilkan makanannya sendiri.... WOW!! Nah nambah ilmu kan? dilanjutkan yuk mengenal lebih jauh apa sih itu organisme <em>Protozoa, Algae</em> dan <em>Myxomicota</em>. Silahkan pilih menu di sebelah kanan ya.</p></p></xyz>
+					</div>
+			</div>
+		</section>
+
+        <!-- Protozoa -->
+        <section id="two">
+        <xyz1 style="display:none">
+            <div class="container">
+                    <h4 class="wow fadeInLeft" align="center">&nbsp;</h4>
+                    <h2 class="wow fadeInLeft" align="center">Protozoa</h2>
+                	<div class="features" align="justify">
+                	  <p class="wow zoomIn" align="justify"><em>Protozoa</em> (Latin, <em>proto</em> = pertama, <em>zoa/zoon</em> = binatang) adalah Protista yang mirip hewan, selain itu organisme ini  hanya tersusun atas satu sel dan merupakan penyusun utama <em>zooplankton/plankton</em> yang berada di perairan. Bentuknya masih terdiri dari sel tunggal sehingga berukuran mikroskopis atau kurang dari satu milimeter.</p>
+                	  <p class="wow slideInRight">Berdasarkan struktur alat geraknya, <em>Protozoa</em> dapat dikelompokkan menjadi empat sebagai berikut:</p>
+                      <ol class="wow fadeInDown">
+                        <li><strong>Rhizopoda</strong>,<br>
+                          Yaitu Protozoa yang bergerak   dengan kaki semu (<em>pseudopodia</em>) yang merupakan penjuluran <em>protoplasma</em> sel, yang berfungsi sebagai alat penangkap mangsa. Hidup di air tawar,   air laut, tempat-tempat basah, dan sebagian ada yang hidup dalam tubuh   hewan atau manusia. Perkembangbiakan secara aseksual melalui pembelahan   biner dan pembentukkan kista. Jenis yang paling mudah diamati adalah   <em>Amoeba</em>.</li>
+                        <li><strong>Flagellata</strong>,<br>
+                          Yaitu Protozoa yang bergerak dengan bulu cambuk (<em>flagel</em>) yang digunakan juga sebagai alat indera dan alat bantu untuk menangkap makanan. Selain itu jenis ini juga dibedakan menjadi jenis fitoflagellata contohnya <em>Euglena </em> dan zooflagellata contohnya <em>Trypanosoma</em>.<br>
+                        </li>
+                        <li><strong>Cilliata</strong>,<br>
+                          Yaitu Protozoa yang bergerak dengan bulu getar (<em>silia</em>)   yang digunakan juga sebagai alat gerak dan mencari   makanan. Ukuran silia lebih pendek dari flagel, contohnya <em>Paramaecium Caudatum, Stentor, Didinium.</em></li>
+                        <li><strong>Apicomplexa / Sporozoa</strong>,<br>
+                          Yaitu Protozoa yang berbentuk bulat atau bulat   panjang dan tidak memiliki alat gerak khusus, menghasilkan spora   (<em>sporozoid</em>) sebagai cara perkembangbiakannya. Makanannya langsung   diperoleh dari inang tempat hidupnya, sehingga semua golongan <em>Apicomplexa/Sporozoa</em> ini adalah <em>endoparasit</em>, contohnya <em>Plasmodium</em> yaitu penyebab penyakit malaria.</li>
+                      </ol>
+					  </div>
+                      </div>
+        	</xyz1>
+        </section>
+            
+        <!-- Algae -->
+        <section id="three"><xyz2 style="display:none">
+            <div class="container">
+                    <h4 class="wow fadeInRight" align="center">&nbsp;</h4>
+                    <h2 class="wow fadeInRight" align="center">Algae</h2>
+                	<div class="features" align="justify">
+                	  <p class="wow zoomIn" align="justify"><em>Algae</em> dalam bahasa Latin yang berarti Ganggang/Alga atau bisa juga Rumput Laut termasuk Protista yang mirip tumbuhan. Organisme ini bersifat fotoautotrof karena memiliki klorofil atau plastida yang berisi berbagai pigmen fotosintetik lainnya. Ganggang mudah ditemukan dilingkungan perairan, baik di air tawar maupun   di air laut. Ada yang hidup menempel di suatu tempat atau   melayang-layang di dalam air. Ganggang menyebabkan air danau, air   sawah, air kolam, atau akuarium tampak berwarna hijau. Namun, masyarakat   sering keliru menyebutnya dengan lumut. Ganggang berbeda lumut. Lumut   tidak terendam air, sedangkan ganggang hidup dalam air. Bila dipegang,   lumut terasa seperti beludru dan lebih kering, sedangkan ganggang terasa   basah, licin atau berlendir. </p>
+                	  <p class="wow fadeInRight">Berdasarkan warna zat / pigmen, <em>Algae</em> dapat dikelompokkan menjadi enam sebagai berikut:</p>
+                      <ol class="wow fadeInUp">
+							<li><strong>Chlorophyta (<em>Algae</em> Hijau)</strong>,
+							<br>
+							Alga ini merupakan kelompok alga yang paling beragam karena ada yang   bersel tunggal dan bersel banyak. Pigmen yang dimilikinya adalah   klorofil yang mengandung <em>karoten</em>. Banyak terdapat di danau, kolam   tetapi sebagian ada juga yang hidup di laut. Contoh: <em>Chlorococcum, Chlorella, Hydrodictyon</em> dan <em>Volvox</em>.</li>
+							<li><strong>Phaeophyta (<em>Algae</em> Coklat)</strong>,
+							<br>
+							Alga coklat ini tubuhnya menyerupai tumbuhan yang  memiliki pigmen berupa <em>xantofil, fukosantin, klorofil a</em> dan <em>c</em>. Habitatnya berada di dasar laut, reproduksi secara metagenesis (pergantian keturunan   antara vegetatif dan generatif). Contoh: <em>Sargassum, Fucus, Turbinaria</em> dan <em>Macrocystis</em>.</li>
+							<li><strong> Rhodophyta (<em>Algae</em> Merah)</strong>,
+							<br>
+							Alga merah ini memiliki bentuk tubuh seperti rumput sehingga disebut dengan rumput laut. Tubuh bersel banyak bentuk seperti lembaran. Warna merah karena mengandung pigmen <em>fikoeritrin</em>. Alga ini berkembang biak dengan reproduksi seksual melalui peleburan antara spermatozoid dan ovum menghasilkan zigot. Contoh: <em>Euchemma Spinosum, Gelidium, Rhodymenia</em> dan <em>Scinata</em>.</br></li>
+							<li><strong></strong><strong>Chrysophyta (<em>Algae</em> Keemasan)</strong>,<br>
+                            Alga keemasan ini sering disebut <em>klep</em> yang merupakan protista laut terbesar dan paling rumit. Berwarna kecoklatan karena memiliki pigmen yang dominan fikosantin daripada karoten dan xantofil. Contoh: <em>Diatom, Navicula, Cyclotella</em> dan <em>Pinnularia</em></li>
+							<li><strong>Phyrrophyta (<em>Algae</em> Api)</strong>,<br>
+                            Algae ini disebut ganggang api karena mampu memancarkan cahaya (<em>bioluminesens</em>) pada kondisi gelap. Hidup di air laut dan ada yang di air tawar, sering disebut <em>dinoflagellata</em> karena memiliki 2 flagel. Selain itu memiliki pigmen berupa <em>klorofil a</em> dan <em>c</em>. Contoh : <em>Noctiluca, Ceratium, Gonyaulax</em> dan <em>Perridium</em>.</li>
+							<li><strong>Euglenophyta</strong><strong></strong>,<br>
+                            Algae ini merupakan kelompok protista yang unik karena dia memiliki sifat mirip tumbuhan dan hewan. Dianggap mirip tumbuhan karena memiliki klorofil a dan b, juga ditemukan karotin sehingga dia akan berfotosintesis. Tetapi juga dianggap mirip hewan karena dapat bergerak aktif dengan pertolongan satu atau beberapa bulu cambuk (flagela) yang keluar dari selnya. Karena mempunyai alat gerak, dia dapat hidup di perairan, misalnya air tawar dan air tergenang. Contoh: <em>Euglena Viridis</em>.</li>
+                      </ol>
+                
+              </div>
+            </div>
+        </xyz2></section>    
+
+		<!-- Algae -->
+        <section id="four"><xyz3 style="display:none">
+            <div class="container">
+                    <h4 class="wow fadeInRight" align="center">&nbsp;</h4>
+                    <h2 class="wow fadeInRight" align="center">Myxomicota</h2>
+           	  <div class="features" align="justify">
+           	    <p class="wow zoomIn" align="justify">Organisme <em>Myxcomicota</em> atau Jamur Lendir merupakan protista yang menyerupai jamur, mempunyai struktur tubuh dan cara   reproduksi yang tidak sama dengan Kingdom Fungi. Cara reproduksi jamur   lendir hampir sama dengan Fungi, tetapi tidak dapat dikelompokkan dalam   kingdom Fungi karena gerakan pada fase aseksualnya lebih mirip dengan   <em>Amoeba</em>. Semetara itu, jamur lendir ini lebih menyerupai ganggang pada struktur   molekulnya, hanya saja tidak mengandung klorofil. Selain itu ada beberapa jenis yang hampir mirip dengan organisme <em>Myxomicota</em> yaitu <em>Oomycota</em> atau jamur air.</p>
+           	    <p class="wow fadeInRight">Berdasarkan susunan tubuh, <em>Myxomicota </em>dapat dikelompokkan menjadi dua golongan sebagai <em>Acrasiomycota</em> (Jamur Lendir Bersekat), dan <em>Myxomycota</em> (Jamur Lendir Tidak Bersekat).</p>
+                
+              </div>
+            </div>
+        </xyz3></section>    
+
+		<!-- Galeri -->
+        <section id="five">
+            <div class="container">
+              <h2 class="wow fadeInLeft" align="center">Gallery Foto &amp; Video</h2>
+			  <p align="center" class="wow wobble">Klik gambar dibawah ini untuk membaca deskripsi lebih lanjut</p>
+              <div id="grid-gallery" class="grid-gallery wow bounceInRight">
+				<section class="grid-wrap">
+					<ul class="grid">
+						<li>
+							<figure>
+								<img src="img/thumb/5.jpg" alt="img05"/>
+								<figcaption>
+								  <h5 align="center"><strong><em>Amoeba</em></strong></h5>
+							  <p align="center">Adalah Protozoa atau organisme Protista mirip Animalia (hewan). Termasuk Rizhopoda karena bergerak menggunakan kaki semu.</em></p>
+</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="img/thumb/6.jpg" alt="img06"/>
+								<figcaption>
+								  <h5 align="center"><strong><em>Physarum Polycephalum</em></strong></h5>
+							  <p align="center">Adalah  Myxomicota atau Protista mirip Fungi (jamur).</p></figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="img/thumb/7.jpg" alt="img07"/>
+								<figcaption>
+								  <h5 align="center"><strong><em>Rhodophyta</em></strong></h5>
+							  <p align="center">Adalah Algae atau organisme Protista mirip Plantae (tumbuhan).</p></figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="img/thumb/8.jpg" alt="img08"/>
+								<figcaption>
+								<h5 align="center"><strong><em>Plasmodium</em></strong></h5>
+							  <p align="center">Adalah Sporozoa atau organisme Protista yang tidak memiliki alat gerak dan bersifat parasit.</p></figcaption>
+							</figure>
+						</li></li>
+				</section><!-- // grid-wrap -->
+				
+                <section class="slideshow">
+					<ul>
+						<li>
+							<figure>
+								<figcaption>
+									<h3 align="center">Amoeba</h3>
+									<p>Dalam foto ini adalah organisme Amoeba, makhluk hidup ini bukan termasuk jamur, bakteri, hewan ataupun tumbuhan.</p>
+								</figcaption>
+								<img src="img/large/5.jpg" alt="img05"/>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<figcaption>
+									<h3 align="center">Myxomicota / Jamur Lendir</h3>
+									<p>Dalam foto ini merupakan bentuk bakteri <em>e-Collie</em> ataupun organisme <em>Monera</em> pada umumnya. Bakteri ini berada dalam sistem pencernaan manusia di usus buntu berguna sebagai pembusukan sisa-sisa makanan.</p>
+								</figcaption>
+								<img src="img/large/6.jpg" alt="img06"/>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<figcaption>
+									<h3>Rhodophyta / Algae Merah</h3>
+									<p>Ini adalah salah satu contoh foto ganggang merah yang diperbesar menggunakan mikroskop yang diperbesar ratusan kali. Dalam foto ini terlihat algae lebih mirip organisme primitif karena bentuknya yang mikroskopis.</p>
+								</figcaption>
+								<img src="img/large/7.jpg" alt="img07"/>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<figcaption>
+									<h3 align="center">Plasmodium</h3>
+									<p align="center">Foto ini adalah Plasmodium yaitu salah satu organisme yang bersifat endoparasit, bisa juga disebut dengan Apicomplexa.</p>
+								</figcaption>
+								<img src="img/large/8.jpg" alt="img08"/>
+							</figure>
+						</li>
+					</ul>
+					<nav>
+						<span class="icon nav-prev"></span>
+						<span class="icon nav-next"></span>
+						<span class="icon nav-close"></span>
+					</nav>
+					<div class="info-keys icon"><h4>Gunakan Tombol Arah Pada Keyboard</h4></div>
+				</section> <!-- // slideshow -->
+			  </div> <!-- // grid-gallery -->
+              
+              <p class="wow fadeIn" align="center"><video align="center" width="720" height="640" poster="images/videos2.png" controls>
+          <!-- video files -->
+          <source src="video2.mp4" type="video/mp4" />  
+          <!-- fallback for browsers that don't support the video element -->
+        </video></p>
+              </ul>
+			</div>
+		</section>
+        
+
+	<!-- Game -->
+        <section id="six">
+          <div class="container">
+              <h2 class="wow fadeInLeft" align="center">Mini Games</h2>
+		    <p class="wow tada" align="center">Nah ini ada commercial break untuk menyegarkan otak agar kamu semangat belajar lagi. Game ini mengibaratkan kamu adalah sebuah <em>Protozoa</em> yang saling berkompetisi memangsa organisme lainnya.                 	<tombol4 onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()"><u>Klik disini deh</u></tombol4> untuk mulai main.</p>
+           	<xyz4 style="display:none"><p align="center"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="640" height="480" id="FlashID" title="Mini Games">
+                  <param name="movie" value="6.swf" />
+                  <param name="quality" value="high" />
+                  <param name="wmode" value="opaque" />
+                  <param name="swfversion" value="10.1.0.0" />
+                  <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
+                  <param name="expressinstall" value="Scripts/expressInstall.swf" />
+                  <param name="autoplay" value="false">
+                  <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+                  <!--[if !IE]>-->
+                  <object type="application/x-shockwave-flash" data="6.swf" width="640" height="480">
+                    <!--<![endif]-->
+                    <param name="quality" value="high" />
+                    <param name="wmode" value="opaque" />
+                    <param name="swfversion" value="10.1.0.0" />
+                    <param name="expressinstall" value="Scripts/expressInstall.swf" />
+                    <param name="autoplay" value="false">
+                    <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
+                    <div>
+                      <h4>Content on this page requires a newer version of Adobe Flash Player.</h4>
+                      <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" width="112" height="33" /></a></p>
+                    </div>
+                    <!--[if !IE]>-->
+                  </object>
+                  <!--<![endif]-->
+                </object>
+              </p></xyz4>
+			</div>
+		</section>
+
+    <!-- Footer -->
+    <section id="footer">
+        <div class="container"> <ul class="copyright">
+          <li>© 2015 // Riansyah Rizky Poetra // 12105244001 // Teknologi Pendidikan | Originally layout by <a href="https://github.com/Thames1990/Webdesign-Multimedia">Thomas Mohr</a></li>
+        </ul>
+        </div>
+    </section>
+
+    <script language="javascript" type="text/javascript">
+        setBannerHeight()
+    </script>
+	<script src="js/imagesloaded.pkgd.min.js"></script>
+	<script src="js/masonry.pkgd.min.js"></script>
+	<script src="js/classie.js"></script>
+	<script src="js/cbpGridGallery.js"></script>
+	<script>
+			new CBPGridGallery( document.getElementById( 'grid-gallery' ) );
+	</script>
+
+</div>
+<script type="text/javascript">
+swfobject.registerObject("FlashID");
+    </script>
+</body>
+</html>

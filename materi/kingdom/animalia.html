@@ -1,0 +1,388 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<script language='JavaScript'>
+		var txt="Belajar Klasifikasi Makhluk Hidup ";
+		var kecepatan=300;var segarkan=null;function bergerak() { document.title=txt;
+		txt=txt.substring(1,txt.length)+txt.charAt(0);
+		segarkan=setTimeout("bergerak()",kecepatan);}bergerak();
+	</script>
+    <meta name="author" content="Riansyah R">
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#B0E600">
+
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/jquery.poptrox.js"></script>
+    <script src="js/jquery.scrollzer.min.js"></script>
+    <script src="js/jquery.scrolly.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-layers.min.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/banner.js"></script>
+
+    <!-- Gallery-->
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<script src="js/modernizr.custom.js"></script>
+
+    <!-- No Backspace & Double Click-->
+	<script type="text/javascript">
+	function delay (URL) {
+ 	   setTimeout( function() { window.location = URL }, 500 );
+	}
+	</script>
+    <!-- No Backspace & Double Click-->
+
+    <!-- Delay-->
+	<script type="text/javascript">
+	function delay (URL) {
+ 	   setTimeout( function() { window.location = URL }, 500 );
+	}
+	</script>
+    <!-- Delay-->
+
+    <!-- Script HTML5 SoundFX -->
+    <script>
+	var html5_audiotypes={
+	"mp3": "audio/mpeg",
+	"mp4": "audio/mp4",
+	"ogg": "audio/ogg",
+	"wav": "audio/wav"
+	}
+	function createsoundbite(sound){
+		var html5audio=document.createElement('audio')
+		if (html5audio.canPlayType){ //check support for HTML5 audio
+			for (var i=0; i<arguments.length; i++){
+				var sourceel=document.createElement('source')
+				sourceel.setAttribute('src', arguments[i])
+				if (arguments[i].match(/\.(\w+)$/i))
+					sourceel.setAttribute('type', html5_audiotypes[RegExp.$1])
+				html5audio.appendChild(sourceel)
+			}
+			html5audio.load()
+			html5audio.playclip=function(){
+				html5audio.pause()
+				html5audio.currentTime=0
+				html5audio.play()
+			}
+			return html5audio
+		}
+		else{
+			return {playclip:function(){throw new Error("Your browser doesn't support 		HTML5 audio unfortunately")}}
+		}
+	}
+	var mouseoversound=createsoundbite("sound/whistle.ogg", "sound/whistle.mp3", "sound/whistle.wav")
+	var clicksound=createsoundbite("sound/click.ogg", "sound/click.mp3", "sound/click.wav")
+	</script>
+    <!-- Script HTML5 SoundFX -->
+
+ 	<!-- Animation -->
+    <script src="js/wow.min.js"></script>
+	<script>
+		 new WOW().init();
+	</script>
+    <link rel="stylesheet" href="css/animations.css">
+ 	<!-- Animation -->
+
+    <!-- No Backspace & Double Click-->
+	<script>
+		document.onkeydown = function (event) {
+			if (!event) { /* This will happen in IE */
+				event = window.event;
+			}
+			var keyCode = event.keyCode;
+			if (keyCode == 8 &&
+				((event.target || event.srcElement).tagName != "TEXTAREA") && 
+				((event.target || event.srcElement).tagName != "INPUT")) { 
+				if (navigator.userAgent.toLowerCase().indexOf("msie") == -1) {
+					event.stopPropagation();
+				} else {
+					alert("prevented");
+					event.returnValue = false;
+				}
+				return false;
+			}
+		};	
+	</script>
+    <script type="text/javascript">
+		document.ondblclick = function(evt) {
+    		if (window.getSelection)
+        		window.getSelection().removeAllRanges();
+ 		   else if (document.selection)
+      			document.selection.empty();
+				}
+	</script>
+    <!-- No Backspace & Double Click-->
+
+    <!-- Hide n Show-->
+	<script>
+	$(document).ready(function(){
+		$("tombol").click(function(){
+			$("xyz").toggle();
+		});
+	});
+	</script>
+	<script>
+	$(document).ready(function(){
+		$("tombol1").click(function(){
+			$("xyz1").toggle();
+		});
+	});
+	</script>
+	<script>
+	$(document).ready(function(){
+		$("tombol2").click(function(){
+			$("xyz2").toggle();
+		});
+	});
+	</script>
+   
+    <!-- Hide n Show-->
+
+	<noscript>
+        <link rel="stylesheet" href="css/skel.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/style-xlarge.css"/>
+	</noscript>
+
+</head>
+<!--
+<iframe src="news.html"
+width="40%" height="80"
+align="right">
+<p>See our <a href="news.html">newsflashes</a>.</p>
+</iframe>
+-->
+
+<body oncontextmenu="return false">
+<div id="wrapper" class="wow fadeIn" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;">
+
+<section id="header" class="skel-layers-fixed wow slideInRight" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;">
+    	<header>
+            <span class="image avatar">
+                <img
+                        src="images/avatar.png"/>
+            </span>
+            <h1><a href="javascript:delay('../materi.html#one')" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()"><img src="images/menu.png" width="364" height="122" alt="Kembali Ke Menu Awal"/></a></h1>
+      </header>
+        <nav id="nav">
+            <ul>
+                <li><a href="#one" class="active" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()">Mengenal Kingdom Animalia</a></li>
+                <li><tombol1><a href="#two" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()">Kelas <em>Vertebrata</em></a></tombol1></li>
+                <li><tombol2><a href="#three" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()">Kelas <em>Avertebrata</em></a></tombol2></li>
+                <li><tombol3><a href="#four" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()">Gallery & Video</a></tombol3></li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- Pengantar -->
+        <section id="one">
+            <div class="container">
+                    <h2 class="wow fadeInLeft" align="center">Yuk Mengenal Kingdom  Animalia</h2>
+                	<div class="features">
+                 	<p class="wow zoomIn" align="justify">Makhluk hidup dalam Kingdom Animalia adalah organisme <em><strong>eukariota </strong></em><em><strong>multicell</strong></em>, yaitu makhluk hidup ber-sel banyak yang memiliki membran inti. semua jenis Animalia merupakan heterotrof. Kerajaan ini biasa dikenal dengan dunia hewan, pada umumnya dikategorikan menjadi dua kelompok besar yakni hewan bertulang belakang (<em>Vertebrata</em>) dan tidak bertulang belakang (<em>Avertebrata</em>). Adapun ciri-ciri organisme <em>Animalia</em>, yaitu:</p>
+                    <ol class="wow zoomInDown">
+                         <li>Merupakan organisme <em>Eukariotik</em> atau mempunyai membran inti.</li>
+                         <li>Merupakan organisme <em>Multicell </em>atau tersusun  atas banyak sel.</li>
+                         <li>Bersifat <em>Heterotrofi</em> yang berarti tidak mampu membuat makanannya sendiri.</li>
+                         <li>Tidak memiliki dinding sel, komponen terbesar sel  hewan tersusun atas protein struktural <em>kolagen</em>. </li>
+                         <li>Memiliki jaringan saraf dan jaringan otot sehingga  bisa aktif bergerak (bersifat <em>motil</em>). </li>
+                         <li>Hampir semuanya berkembang biak secara seksual, hanya beberapa yang mampu secara aseksual.</li>
+					</ol>
+                 	<h5 align="center" class="wow pulse" data-wow-duration="0.5s" data-wow-iteration="50" data-wow-delay="15s" align="justify"><strong>Tahukah kamu apakah itu yang dimaksud seksual dan aseksual? 
+                 	<tombol onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()"><u>Klik disini deh</u></tombol> kalau kepo :D</strong></h5>
+                    	<xyz style="display:none"><p><p align="justify">Yang dimaksud dengan <strong>seksual</strong> adalah organisme (hewan) yang mampu berkembang biak dengan memerlukan sel jantan dan sel betina. Sedangkan <strong>aseksual</strong> adalah organisme (hewan) yang mampu berkembang biak dengan membelah sel sendiri.... WOW!! Nah nambah ilmu kan? dilanjutkan yuk mengenal lebih jauh apa sih itu organisme <em>Archaebacteria</em> dan <em>Cyanobacteria</em>. Silahkan pilih menu di sebelah kanan ya.</p></p></xyz>
+					</div>
+			</div>
+		</section>
+
+        <!-- Verteb -->
+        <section id="two">
+        <xyz1 style="display:none">
+            <div class="container">
+                    <h4 class="wow fadeInLeft" align="center">&nbsp;</h4>
+                    <h2 class="wow fadeInLeft" align="center">Vertebrata</h2>
+                	<div class="features" align="justify">
+                	  <p class="wow zoomIn" align="justify"><em>Vertebrata</em> adalah kelompok Animalia (hewan) bertulang belakang memiliki tubuh simetris bilateral dengan pembagian tubuh terdiri atas kepala, leher, badan, dan ekor. Meskipun demikian, ada pula anggota Vertebrata tidak berleher dan tidak berekor. Vertebrata terbagi lagi menjadi dua kelas yaitu; <em>Pisces</em> terdiri dari <em>Agnatha (Cyclostomata), Chrondrichthyes</em> dan <em>Osteichthyes</em>; dan <em>Tetrapoda</em> terdiri dari<em> Amphibia, Reptilia, Aves</em> dan <em>Mamalia</em>.</p>
+                	  <p class="wow slideInRight">Berdasarkan kelasnya, <em>Pisces</em> (ikan) dapat dikelompokkan menjadi tiga sebagai berikut:</p>
+                      <ol class="wow fadeInDown">
+                        <li><strong>Agnatha (Cyclostomata)</strong>,<br>
+                          Adalah jenis ikan tidak memiliki rahang, seperti <em>Petromyzon Marinus</em> (ikan lamprey laut), <em>Eptatretus Goliath</em> (ikan hag).</li>
+                        <li><strong>Chrondrichthyes</strong>,<br>
+                          Adalah jenis ikan yang memiliki tulang rawan di tubuhnya, seperti <em>Squalus Acanthias </em>(ikan hiu), <em>Dasyatis</em> (ikan pari).</li>
+                        <li><strong>Osteichthyes</strong>,<br>
+                          Adalah jenis ikan yang memiliki tulang sejati, seperti <em>Chanos Chanos</em> (ikan bandeng), <em>Cyprinus Carpio</em> (ikan mas).</li>
+                      </ol>
+                      <p class="wow slideInRight">Berdasarkan kelasnya, <em>Tetrapoda</em> (hewan darat) dapat dikelompokkan menjadi empat sebagai berikut:</p>
+                      <ol class="wow fadeInDown">
+                        <li><strong>Amphibia</strong>,<br>
+                          Adalah hewan bertulang belakang berdarah dingin, pada umumnya tubuhnya berlendir. Contohnya <em>Rana Limnocharis</em> (katak sawah), <em>Bufo Melanostictus</em> (bangkong).</li>
+                        <li><strong>Reptilia</strong>,<br>
+                          Adalah hewan bertulang belakang berdarah panas, pada umumnya memiliki kulit kasar atau bersisik. Contohnya <em>Crocodylus Porosus</em> (buaya), <em>Chelonia Midas</em> (penyu), <em>Naja Sputatrik</em> (ular cobra).</li>
+                        <li><strong>Aves</strong>,<br>
+                          Adalah hewan bertulang belakang yang tulangnya memiliki rongga, sebagian besar mampu terbang dan memiliki bulu. Contohnya <em>Pavo Cristatus</em> (burung merak), <em>Columba Fasciata</em> (merpati).</li>
+                          <li><strong>Mammalia</strong>,<br>
+                          Adalah hewan bertulang belakang yang memiliki kelenjar susu, semua jenis mamalia berkembang biak dengan melahirkan (<em>vivipar</em>). Contohnya <em>Balaenoptera Musculus </em>(ikan paus), <em>Genitif Elephantis </em>(gajah).</li>
+                      </ol>
+					  </div>
+                      </div>
+        	</xyz1>
+        </section>
+            
+        <!-- Averteb -->
+        <section id="three"><xyz2 style="display:none">
+            <div class="container">
+                    <h4 class="wow fadeInRight" align="center">&nbsp;</h4>
+                    <h2 class="wow fadeInRight" align="center">Avertebrata</h2>
+                	<div class="features" align="justify">
+                	  <p class="wow zoomIn" align="justify"><em>Avertebrata/Invertebrata</em> adalah kelompok Animalia (hewan) yang mempunyai ciri-ciri tidak bertulang belakang, susunan syaraf terletak di   bagian ventral (perut) di bawah saluran pencernaan, umumnya memiliki   rangka luar (eksoskeleton) dan otak tidak dilindungi oleh tengkorak.</p>
+                	  <p class="wow slideInRight">Berdasarkan kelasnya, <em>Avertebrata</em> dapat dikelompokkan menjadi delapan sebagai berikut:</p>
+                      <ol class="wow fadeInDown">
+                        <li><strong>Porifera (Hewan Berpori)</strong>,<br>
+                          Porifera (Latin, <em>porus</em> = pori dan <em>fer</em> = pembawa) adalah jenis hewan yang makanannya adalah bakteri dan plankton. Makanan yang masuk ke tubuhnya dalam bentuk cairan sehingga porifera disebut juga sebagai pemakan cairan. Habitat porifera umumnya di laut, contohnya <em>Sycon, Clathrina, Euspongia</em> dan <em>Spongia</em>.</li>
+                        <li><strong>Coelenterata (Hewan Berongga)</strong>,<br>
+                          <em>Coelenterata</em> (Latin, <em>coelenteron</em> = rongga) adalah jenis hewan  yang memiliki rongga tubuh. Rongga tubuh tersebut berfungsi sebagai alat pencernaan (<em>gastrovaskuler</em>). Mereka disebut juga <em>Cnidaria</em> (Latin, <em>cnido</em> = penyengat) karena sesuai dengan cirinya yang memiliki sel penyengat, contohnya <em>Koral, Polip, Anemone </em>dan <em>Ubur-ubur</em>.</li>
+                        <li><strong>Platyhelminthes (Cacing Pipih)</strong>,<br>
+                        <em>Platyhelminthes</em> adalah binatang sejenis cacing pipih dengan simetri tubuh tanpa peredaran darah dengan pusat syaraf yang berpasangan. Cacing pipih kebanyakan sebagai biang timbulnya penyakit karena hidup sebagai parasit pada binatang / hewan atau manusia, contohnya <em>Planaria, Taenia Solium</em> (cacing pita babi).</li>
+                        <li><strong>Arthropoda (Hewan Berbuku-Buku)</strong>,<br>
+                        <em>Arthropoda</em> adalah   hewan dengan kaki beruas-ruas dengan sistem saraf tali dan organ tubuh   telah berkembang dengan baik. Tubuh artropoda terbagi atas segmen-segmen   yang berbeda dengan sistem peredaran darah terbuka. Contohnya kelompok <em>Insecta</em> (serangga), <em>Crustaceae</em> (udang-udangan), <em>Arachnoidea</em> (laba-laba) dan <em>Myriapoda</em> (lipan).</li>
+                        <li><strong>Echinodermata (Hewan Berkulit Duri)</strong>,<br>
+                        <em>Echinodermata</em> adalah   binatang berkulit duri yang hidup di wilayah laut dengan jumlah lengan   lima buah bersimetris tubuh simetris radial. Beberapa organ tubuh   echinodermata sudah berkembang dengan baik. Tubuh ditutupi duri yang   tersusun atas zat kapur, memiliki daya regenerasi yang tinggi, hidup di   laut, berkembang biak secara kawin yang pembuahannya diluar tubuh. Contohnya <em>Asteroidea</em> (bintang laut), <em>Echinoidea</em> (landak laut), <em>Holothuroidea</em> (teripang)</li>
+                        <li><strong>Nemathelminthes (Cacing Gilig)</strong>,<br>
+                        <em>Nemathelminthes </em> atau cacing gilik / gilig adalah hewan yang memiliki tubuh simetris bilateral dengan saluran pencernaan yang baik namun tidak ada sistem peredaran darah., contohnya <em>Ascaris Lumbricoides</em> (cacing perut), <em>Oxyuris Vermicularis</em> (cacing kremi), dan <em>Ancylostoma Duodenale</em> (cacing tambang).</li>
+                        <li><strong>Annelida (Cacing Gelang)</strong>,<br>
+                        <em>Annelida </em>adalah   cacing gelang dengan tubuh yang terdiri atas segmen-segmen dengan   berbagai sistem organ tubuh yang baik dengan sistem peredaran darah   tertutup. <em>Annelida</em> sebagian besar memiliki dua kelamin sekaligus dalam   satu tubuh atau <em>hermafrodit</em>, contohnya <em>Lumbricus Terrestris</em> (cacing tanah), <em>Hirudo Medicinalis</em> (lintah), <em>Haemodipsa</em> (pacet).</li>
+                        <li><strong>Mollusca (Hewan Bertubuh Lunak)</strong>,<br>
+                        <em>Mollusca</em> adalah   hewan bertubuh lunak tanpa segmen dengan tubuh yang lunak dan biasanya   memiliki pelindung tubuh yang berbentuk cangkang atau cangkok yang   terbuat dari zat kapur untuk perlindungan diri dari serangan predator   dan gangguan lainnya. Hidup di air laut, air tawar dan di darat, contohnya <em>Cumi-Cumi, Sotong, Siput Darat, Siput Laut</em> dan <em>Chiton</em>.</li>
+                      </ol>
+              </div>
+            </div>
+        </xyz2></section>    
+        
+		<!-- Galeri -->
+        <section id="four">
+            <div class="container">
+              <h2 class="wow fadeInLeft" align="center">Gallery Foto &amp; Video</h2>
+			  <p align="center" class="wow wobble">Klik gambar dibawah ini untuk membaca deskripsi lebih lanjut</p>
+              <div id="grid-gallery" class="grid-gallery wow bounceInRight">
+				<section class="grid-wrap">
+					<ul class="grid">
+						<li>
+							<figure>
+								<img src="img/thumb/17.jpg" alt="img17"/>
+								<figcaption>
+								  <h5 align="center"><strong><em>Campechanus</em></strong></h5>
+							  <p align="center">Adalah salah satu Animalia kelas <em>Vertebrata</em> jenis <em>Pisces</em>. Dalam foto diatas lebih dikenal dengan ikan Kakap termasuk <em>Osteichthyes</em>.</p>
+</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="img/thumb/18.jpg" alt="img18"/>
+								<figcaption>
+								  <h5 align="center"><strong><em>Nisaetus</em></strong></h5>
+							  <p align="center">Adalah salah satu Animalia kelas <em>Vertebrata</em> jenis <em>Aves</em>. Dalam foto diatas lebih dikenal dengan burung Elang.</p></figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="img/thumb/19.jpg" alt="img19"/>
+								<figcaption>
+								  <h5 align="center"><strong><em>Achatina Fulica</em></strong></h5>
+							  <p align="center">Adalah salah satu Animalia kelas <em>Avertebrata</em> jenis <em>Mollusca</em>. Dalam foto diatas lebih dikenal dengan hewan Siput atau Bekicot.</p></figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="img/thumb/20.jpg" alt="img20"/>
+								<figcaption>
+								<h5 align="center"><strong>Actiniara</strong></h5>
+							  <p align="center">Adalah salah satu Animalia kelas <em>Avertebrata</em> jenis <em>Coelenterata</em>. Dalam foto diatas lebih dikenal dengan Anemon Laut.</p></figcaption>
+							</figure>
+						</li></li>
+				</section><!-- // grid-wrap -->
+				
+                <section class="slideshow">
+					<ul>
+						<li>
+							<figure>
+								<figcaption>
+									<h3 align="center">Campechanus</h3>
+									<p>Dalam gambar ini adalah ikan Kakap yang termasuk Osteichthyes atau jenis bertulang belakang sejati. Pada umumnya ikan air tawar dan air payau termasuk dalam jenis ini.</p>
+								</figcaption>
+								<img src="img/large/17.jpg" alt="img17"/>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<figcaption>
+									<h3 align="center">Nisaetus</h3>
+									<p>Dalam gambar ini adalah burung Elang yang termasuk Aves atau jenis unggas. Pada umumnya jenis unggas mampu terbang menggunakan kaki sebagai lengan sayap dan berbulu.</p>
+								</figcaption>
+								<img src="img/large/18.jpg" alt="img18"/>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<figcaption>
+									<h3>Achatina Fulica</h3>
+									<p>Ini adalah Siput/Bekicot yang merupakan salah satu hewan Avertebrata jenis Mollusca, biasanya jenis ini memiliki ciri-ciri tubuh  elastis yang dilindungi oleh cangkang dan berlendir.</p>
+								</figcaption>
+								<img src="img/large/19.jpg" alt="img19"/>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<figcaption>
+									<h3 align="center">Actiniara</h3>
+									<p align="center">Dalam gambar ini adalah Anemon Laut, pada awalnya peneliti mengira bahwa hewan ini termasuk tumbuhan laut. Kenyataannya hewan ini memiliki tubuh berongga yang berperan sebagai mulut penghisap. Contoh lainnya adalah ubur-ubur.</p>
+								</figcaption>
+								<img src="img/large/20.jpg" alt="img20"/>
+							</figure>
+						</li>
+					</ul>
+					<nav>
+						<span class="icon nav-prev"></span>
+						<span class="icon nav-next"></span>
+						<span class="icon nav-close"></span>
+					</nav>
+					<div class="info-keys icon"><h4>Gunakan Tombol Arah Pada Keyboard</h4></div>
+				</section> <!-- // slideshow -->
+			  </div> <!-- // grid-gallery -->
+              
+              <p class="wow fadeIn" align="center"><video align="center" width="720" height="640" poster="images/videos.png" controls>
+          <!-- video files -->
+          <source src="video5.mp4" type="video/mp4" />  
+          <!-- fallback for browsers that don't support the video element -->
+        </video></p>
+              </ul>
+			</div>
+		</section>
+        
+        
+    <!-- Footer -->
+    <section id="footer">
+        <div class="container"> <ul class="copyright">
+          <li>© 2015 // Riansyah Rizky Poetra // 12105244001 // Teknologi Pendidikan | Originally layout by <a href="https://github.com/Thames1990/Webdesign-Multimedia">Thomas Mohr</a></li>
+        </ul>
+        </div>
+    </section>
+
+    <script language="javascript" type="text/javascript">
+        setBannerHeight()
+    </script>
+	<script src="js/imagesloaded.pkgd.min.js"></script>
+	<script src="js/masonry.pkgd.min.js"></script>
+	<script src="js/classie.js"></script>
+	<script src="js/cbpGridGallery.js"></script>
+	<script>
+			new CBPGridGallery( document.getElementById( 'grid-gallery' ) );
+	</script>
+
+</div>
+</body>
+</html>

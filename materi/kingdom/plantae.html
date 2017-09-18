@@ -1,0 +1,414 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<script language='JavaScript'>
+		var txt="Belajar Klasifikasi Makhluk Hidup ";
+		var kecepatan=300;var segarkan=null;function bergerak() { document.title=txt;
+		txt=txt.substring(1,txt.length)+txt.charAt(0);
+		segarkan=setTimeout("bergerak()",kecepatan);}bergerak();
+	</script>
+    <meta name="author" content="Riansyah R">
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#B0E600">
+
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/jquery.poptrox.js"></script>
+    <script src="js/jquery.scrollzer.min.js"></script>
+    <script src="js/jquery.scrolly.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-layers.min.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/banner.js"></script>
+
+    <!-- Gallery-->
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<script src="js/modernizr.custom.js"></script>
+
+    <!-- No Backspace & Double Click-->
+	<script type="text/javascript">
+	function delay (URL) {
+ 	   setTimeout( function() { window.location = URL }, 500 );
+	}
+	</script>
+    <!-- No Backspace & Double Click-->
+
+    <!-- Delay-->
+	<script type="text/javascript">
+	function delay (URL) {
+ 	   setTimeout( function() { window.location = URL }, 500 );
+	}
+	</script>
+    <!-- Delay-->
+
+    <!-- Script HTML5 SoundFX -->
+    <script>
+	var html5_audiotypes={
+	"mp3": "audio/mpeg",
+	"mp4": "audio/mp4",
+	"ogg": "audio/ogg",
+	"wav": "audio/wav"
+	}
+	function createsoundbite(sound){
+		var html5audio=document.createElement('audio')
+		if (html5audio.canPlayType){ //check support for HTML5 audio
+			for (var i=0; i<arguments.length; i++){
+				var sourceel=document.createElement('source')
+				sourceel.setAttribute('src', arguments[i])
+				if (arguments[i].match(/\.(\w+)$/i))
+					sourceel.setAttribute('type', html5_audiotypes[RegExp.$1])
+				html5audio.appendChild(sourceel)
+			}
+			html5audio.load()
+			html5audio.playclip=function(){
+				html5audio.pause()
+				html5audio.currentTime=0
+				html5audio.play()
+			}
+			return html5audio
+		}
+		else{
+			return {playclip:function(){throw new Error("Your browser doesn't support 		HTML5 audio unfortunately")}}
+		}
+	}
+	var mouseoversound=createsoundbite("sound/whistle.ogg", "sound/whistle.mp3", "sound/whistle.wav")
+	var clicksound=createsoundbite("sound/click.ogg", "sound/click.mp3", "sound/click.wav")
+	</script>
+    <!-- Script HTML5 SoundFX -->
+
+ 	<!-- Animation -->
+    <script src="js/wow.min.js"></script>
+	<script>
+		 new WOW().init();
+	</script>
+    <link rel="stylesheet" href="css/animations.css">
+ 	<!-- Animation -->
+
+    <!-- No Backspace & Double Click-->
+	<script>
+		document.onkeydown = function (event) {
+			if (!event) { /* This will happen in IE */
+				event = window.event;
+			}
+			var keyCode = event.keyCode;
+			if (keyCode == 8 &&
+				((event.target || event.srcElement).tagName != "TEXTAREA") && 
+				((event.target || event.srcElement).tagName != "INPUT")) { 
+				if (navigator.userAgent.toLowerCase().indexOf("msie") == -1) {
+					event.stopPropagation();
+				} else {
+					alert("prevented");
+					event.returnValue = false;
+				}
+				return false;
+			}
+		};	
+	</script>
+    <script type="text/javascript">
+		document.ondblclick = function(evt) {
+    		if (window.getSelection)
+        		window.getSelection().removeAllRanges();
+ 		   else if (document.selection)
+      			document.selection.empty();
+				}
+	</script>
+    <!-- No Backspace & Double Click-->
+
+    <!-- Hide n Show-->
+	<script>
+	$(document).ready(function(){
+		$("tombol").click(function(){
+			$("xyz").toggle();
+		});
+	});
+	</script>
+	<script>
+	$(document).ready(function(){
+		$("tombol1").click(function(){
+			$("xyz1").toggle();
+		});
+	});
+	</script>
+	<script>
+	$(document).ready(function(){
+		$("tombol2").click(function(){
+			$("xyz2").toggle();
+		});
+	});
+	</script>
+    <script>
+	$(document).ready(function(){
+		$("tombol3").click(function(){
+			$("xyz3").toggle();
+		});
+	});
+	</script>    
+    <!-- Hide n Show-->
+
+	<noscript>
+        <link rel="stylesheet" href="css/skel.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/style-xlarge.css"/>
+	</noscript>
+
+</head>
+<!--
+<iframe src="news.html"
+width="40%" height="80"
+align="right">
+<p>See our <a href="news.html">newsflashes</a>.</p>
+</iframe>
+-->
+
+<body oncontextmenu="return false">
+<div id="wrapper" class="wow fadeIn" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;">
+
+<section id="header" class="skel-layers-fixed wow slideInRight" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;">
+    	<header>
+            <span class="image avatar">
+                <img
+                        src="images/avatar.png"/>
+            </span>
+            <h1><a href="javascript:delay('../materi.html#one')" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()"><img src="images/menu.png" width="364" height="122" alt="Kembali Ke Menu Awal"/></a></h1>
+      </header>
+        <nav id="nav">
+            <ul>
+                <li><a href="#one" class="active" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()">Mengenal Kingdom Plantae</a></li>
+                <li><tombol1><a href="#two" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()">Kelas <em>Bryophyta</em></a></tombol1></li>
+                <li><tombol2><a href="#three" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()">Kelas <em>Pterydophyta</em></a></tombol2></li>
+                <li><tombol3><a href="#four" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()">Kelas <em>Spermatophyta</em></a></tombol3></li>
+                <li><a href="#five" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()">Gallery & Video</a></li>
+			</ul>
+        </nav>
+    </section>
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- Pengantar -->
+        <section id="one">
+            <div class="container">
+                    <h2 class="wow fadeInLeft" align="center">Yuk Mengenal Kingdom  Plantae</h2>
+                	<div class="features">
+                 	<p class="wow zoomIn" align="justify">Makhluk hidup dalam Kingdom Plantae adalah organisme <em><strong>eukariota </strong></em><em><strong>multicell</strong></em>, yaitu makhluk hidup ber-sel banyak yang memiliki membran inti. Semua jenis Plantae merupakan autotrof, selain itu Plantae dibagi lagi menjadi tiga kelas menjadi <em>Bryophyta, Pterydophyta</em>, dan <em>Spermatophyta</em>. Adapun ciri-ciri organisme <em>Plantae</em>, yaitu:</p>
+                    <ol class="wow zoomInDown">
+                         <li>Merupakan organisme <em>Eukariotik</em> atau mempunyai membran inti.</li>
+                         <li>Merupakan organisme <em>Multicell </em>atau tersusun  atas banyak sel.</li>
+                         <li>Bersifat <em>Autotrofi</em> yang berarti mampu membuat makanannya sendiri.</li>
+                         <li>Mempunyai  dinding sel yang sifatnya kaku (<em>rigid</em>) dan tersusun atas selulosa.</li>
+                         <li>Lebih dikenal sebagai tumbuh-tumbuhan hijau pada umumnya.</li>
+                         <li>Pada  umumnya   disebut dengan tumbuhan <em>kormofita</em>.</li>
+					</ol>
+                 	<h5 align="center" class="wow pulse" data-wow-duration="0.5s" data-wow-iteration="50" data-wow-delay="15s" align="justify"><strong>Tahukah kamu apakah itu yang dimaksud kormofita? 
+                 	<tombol onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()"><u>Klik disini deh</u></tombol> kalau kepo :D</strong></h5>
+                    	<xyz style="display:none"><p><p align="justify">Yang dimaksud dengan <strong>kormofita</strong> adalah tumbuhan yang sudah dapat dibedakan antara akar, batang dan daun.... WOW!! Nah nambah ilmu kan? dilanjutkan yuk mengenal lebih jauh apa sih itu kelompok kelas <em>Bryophyta, Pterydophyta</em> dan <em>Spermatophyta</em>. Silahkan pilih menu di sebelah kanan ya.</p></p></xyz>
+					</div>
+			</div>
+		</section>
+
+        <!-- Bryophyta -->
+        <section id="two">
+        <xyz1 style="display:none">
+            <div class="container">
+                    <h4 class="wow fadeInLeft" align="center">&nbsp;</h4>
+                    <h2 class="wow fadeInLeft" align="center">Bryophyta</h2>
+                	<div class="features" align="justify">
+                	  <p class="wow zoomIn" align="justify"><em>Bryophyta </em>atau Lumut  termasuk dalam divisi Plantae, tetapi tidak memiliki organ sejati   seperti batang, daun, atau akar. Mereka memiliki suatu rhizoid kecil   yang membuat mereka mampu menempel di tanah. Mereka tumbuh di tempat   teduh dan lembab, seperti di hutan hujan. Mengalami metagenesis, perlu diingat bahwa <em>Bryophyta </em>berbeda dengan <em>Lichenes</em> karena sebagian besar mampu berfotosintesis yang terdiri dari satu jenis organisme.</p>
+                	  <p class="wow slideInRight">Berdasarkan kelasnya, <em>Bryophyta</em> dapat dikelompokkan menjadi tiga sebagai berikut:</p>
+                      <ol class="wow fadeInDown">
+                        <li><strong>Bryopsida (Lumut Daun)</strong>,<br>
+                          Lumut  daun merupakan tumbuhan lumut yang paling terkenal. Hamparan lumut daun terdiri  dari satu tumbuhan lumut daun yang tumbuh dalam kelompok yang padat, sehingga  satu sama lainnya bisa saling menyokong dan menguatkan. Hamparan ini memiliki  sifat seperti karet busa yang bisa menyerap dan menahan air. Contoh lumut daun  adalah <em>Sphagnum</em>.</li>
+                        <li><strong>Hepaticopsida (Lumut Hati)</strong>,<br>
+                        Lumut hati merupakan lumut yang kurang mencolok penampilannya bila dibandingkan dengan lumut daun. Tubuh masih berupa lembaran (talus) yang terbagi atas beberapa lobus. Bentuknya akan mengingatkan pada lobus hati pada hewan. Karena itu, lumut ini dinamakan lumut hati. Contoh lumut hati adalah <em>Marchantia Polymorpha</em>.</li>
+                        <li><strong>Anthocerotopsida (Lumut Tanduk)</strong>,<br>
+                          Lumut tanduk mempunyai kemiripan dengan lumut hati, yakni pada gametofitnya. Bedanya, lumut tanduk memiliki sporofit yang berupa kapsul yang memanjang dan tumbuh seperti tanduk dari hamparan gametofit. Contoh lumut tanduk adalah <em>Anthoceros Laevis</em>.</li>
+                      </ol>
+					  </div>
+                      </div>
+        	</xyz1>
+        </section>
+            
+        <!-- Pterydophyta -->
+        <section id="three"><xyz2 style="display:none">
+            <div class="container">
+                    <h4 class="wow fadeInRight" align="center">&nbsp;</h4>
+                    <h2 class="wow fadeInRight" align="center">Pterydophyta</h2>
+                	<div class="features" align="justify">
+                	  <p class="wow zoomIn" align="justify"><em>Pterydophyta</em> atau paku termasuk dalam divisi Plantae, ia telah memiliki kormus atau jaringan pengangkut dan telah memiliki organ sejati. Mereka bereproduksi aseksual dengan spora. Tumbuhan paku dapat hidup di darat terutama daerah hutan hujan tropis. Namun, ada beberapa jenis paku yang hidup mengapung di air. Seperti halnya bryophyta, pteridophyta juga mengalami   metagenesis.</p>
+                	  <p class="wow fadeInRight"><span class="wow slideInRight">Berdasarkan kelasnya, <em>Bryophyta</em> dapat dikelompokkan menjadi tiga sebagai berikut:</span></p>
+                      <ol class="wow fadeInUp">
+							<li><strong>Psilophyta (Paku Purba)</strong>,<br>
+						Jenis paku ini sebagian besar telah punah, tumbuhan ini belum berdaun dan berakar, batang telah mempunyai berkas pengangkut, bercabang cabang menggarpu dengan sporangium pada ujung cabang-cabangnya. Contohnya adalah <em>Rhynia Major</em>.</li>
+							<li><strong>Lycophyta (Paku Rambat)</strong>,
+							<br>
+							Jenis paku ini berdaun kecil, tersusun spiral, sporangium terkumpul dalam strobilus dan muncul di ketiak daun, batang seperti kawat. Contohnya adalah <em>Lycopodium Clavatum</em></li>
+							<li><strong>Equisetophyta / Sphenophyta</strong>,
+							<br>
+							Jenis paku ini memiliki daun mirip kawat serta daunnya tersusun dalam  satu lingkaran. Bentuk batangnya mirip dengan ekor kuda. Contohnya adalah <em>Equisetum  Debile.</em></li>
+							<li><strong>Pterophyta / Felicinae</strong>,
+							<br>
+							Jenis ini telah memiliki akar, batang, dan daun sejati. Daun  umumnya berukuran besar atau disebut juga megafil. Batangnya dapat tumbuh di  bawah tanah (seperti rhizoma) ataupun batangnya tumbuh di atas tanah. Ciri yang  khas pada divisio ini adalah daun mudanya yang menggulung atau disebut juga<em>circinnatus</em> dan di bagian permukaan bawah  daunnya terdapat sorus.</li>
+                      </ol>
+                
+              </div>
+            </div>
+        </xyz2></section>    
+
+
+        <!-- Spermatophyta -->
+        <section id="four">
+        <xyz3 style="display:none">
+            <div class="container">
+                    <h4 class="wow fadeInLeft" align="center">&nbsp;</h4>
+                    <h2 class="wow fadeInLeft" align="center">Spermatophyta</h2>
+                	<div class="features" align="justify">
+                	  <p class="wow zoomIn" align="justify"><em>Spermatophyta </em>adalah divisi yang memiliki ciri khas yaitu berbiji. Biji   adalah cikal bakal dari individu baru dan merupakan hasil pembuahan   antara putik dan benang sari di bunga. Berdasarkan cara perkembangbiakannya, dibagi kedalam dua kelompok yaitu   <em>gymnospermae</em> (berbiji terbuka) dan <em>angiospermae</em> (berbiji tertutup).   Tumbuhan berbiji terdapat di darat dan beberapa terdapat di air   (contohnya teratai). </p>
+                	  <p class="wow slideInRight">Berdasarkan kelasnya, <em>Gymnospermae</em> dapat dikelompokkan menjadi empat sebagai berikut:</p>
+                      <ol class="wow fadeInDown">
+                        <li><strong>Kelas Cycadophyta</strong>,<br>
+							Jenis tanaman ini merupakan tumbuhan biji yang primitif, hidup di daerah tropis dan subtropis. Di Indonesia kita kenal <em>Cycas Rumphii</em> (pakis haji). Ciri-ciri tumbuhan ini pada umumnya tidak bercabang atau sedikit memiliki cabang. Contohnya adalah <em>Arecaceae</em> (palem).</li>
+                        <li><strong>Kelas Ginkgophyta</strong>,<br>
+							Jenis tanaman ini hampir punah seperti <em>Ginkgo Biloba</em>, merupakan spesies tunggal dari salah satu divisio anggota tumbuhan berbiji terbuka yang pernah tersebar luas di dunia. Pada masa kini tumbuhan ini diketahui hanya tumbuh liar di Asia Timur Laut.</li>
+                        <li><strong>Kelas Peniphyta</strong>,<br>
+							Jenis tanaman ini berkembang biak dengan biji tunggal, contohnya<em> Cocos Nucifera</em> (kelapa), <em>Allium Cepa</em> (bawang merah).</li>
+                        <li><strong>Kelas Gnetophyta</strong>,<br>
+							Jenis tanaman ini berkembang biak dengan biji tunggal, contohnya<em> Cocos Nucifera</em> (kelapa), <em>Allium Cepa</em> (bawang merah).</li>
+                      </ol>
+                      <p class="wow slideInLeft">Berdasarkan kelasnya, <em>Angiospermae</em> dapat dikelompokkan menjadi dua sebagai berikut:</p>
+                      <ol class="wow fadeInDown">
+                        <li><strong>Kelas Monokotil</strong>,<br>
+							Jenis tanaman ini berkembang biak dengan biji tunggal, contohnya<em> Cocos Nucifera</em> (kelapa), <em>Allium Cepa</em> (bawang merah).</li>
+                        <li><strong>Kelas Dikotil</strong>,<br>
+							Jenis tanaman ini berkembang biak dengan biji ganda, contohnya <em>Arachis Hypogaea</em> (kacang tanah), <em>Citrus</em> (jeruk).</li>
+                      </ol>
+			  </div>
+          </div>
+        	</xyz3>
+        </section>
+
+
+		<!-- Galeri -->
+        <section id="five">
+            <div class="container">
+              <h2 class="wow fadeInLeft" align="center">Gallery Foto &amp; Video</h2>
+			  <p align="center" class="wow wobble">Klik gambar dibawah ini untuk membaca deskripsi lebih lanjut</p>
+              <div id="grid-gallery" class="grid-gallery wow bounceInRight">
+				<section class="grid-wrap">
+					<ul class="grid">
+						<li>
+							<figure>
+								<img src="img/thumb/13.jpg" alt="img13"/>
+								<figcaption>
+								  <h5 align="center"><strong><em>Bryophyta / Lumut</em></strong></h5>
+							  <p align="center">Adalah tumbuhan tidak berpembuluh, tetapi memiliki akar, batang dan daun yang mampu berfotosintesis sehingga berbeda dengan <em>Lichenes</em>.</p>
+</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="img/thumb/14.jpg" alt="img14"/>
+								<figcaption>
+								  <h5 align="center"><strong><em>Dryopteris Filix-Mas</em></strong></h5>
+							  <p align="center">Adalah tumbuhan <em></em>paku sejati atau tumbuhan paku yang sebenarnya. Umumnya mempunyai  ujung daun menggulung dan sporangium terdapat dibawah permukaan daun seperti gambar diatas.</p>
+							  </figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="img/thumb/15.jpg" alt="img15"/>
+								<figcaption>
+								  <h5 align="center"><strong><em>Cycas Platyphylla</em></strong></h5>
+							  <p align="center">Adalah jenis <em>Cycas</em> atau Palem Sago, merupakan tanaman berbiji terbuka.</p></figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="img/thumb/16.jpg" alt="img16"/>
+								<figcaption>
+								<h5 align="center"><em><strong>Ginkgo Biloba</strong></em></h5>
+							  <p align="center">Adalah satu-satunya tanaman langka dari kelas <em>Ginkgophyta</em>.</p></figcaption>
+							</figure>
+						</li></li>
+				</section><!-- // grid-wrap -->
+				
+                <section class="slideshow">
+					<ul>
+						<li>
+							<figure>
+								<figcaption>
+									<h3 align="center">Bryophyta</h3>
+									<p>Dalam gambar ini adalah lumut daun atau lebih dikenal dengan lumut pada umumnya yang menempel di batu, tembok, tanah atau pohon.</p>
+								</figcaption>
+								<img src="img/large/13.jpg" alt="img13"/>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<figcaption>
+									<h3 align="center">Dryopteris Filix-Mas</h3>
+									<p>Dalam gambar ini merupakan bentuk tumbuhan paku pada umumnya, mudah dikenali dengan bentuk daun lebar meruncing dengan spora-spora di bawah daun mirip jerawat.</p>
+								</figcaption>
+								<img src="img/large/14.jpg" alt="img14"/>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<figcaption>
+									<h3>Cycas Platyphylla</h3>
+									<p>Dalam gambar ini menunjukkan salah satu ciri-ciri tumbuhan berbiji terbuka, pada umumnya merupakan tumbuhan jenis palem atau tumbuhan yang hidup di padang pasir.</p>
+								</figcaption>
+								<img src="img/large/15.jpg" alt="img15"/>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<figcaption>
+									<h3 align="center">Ginkgo Biloba</h3>
+									<p align="center">Dalam gambar ini merupakan pohon Ginkgo (jenis langka dan hampir punah) yang berasal dari China, ciri khas tumbuhan ini ada pada daunnya yang tipis seperti kipas.</p>
+								</figcaption>
+								<img src="img/large/16.jpg" alt="img16"/>
+							</figure>
+						</li>
+					</ul>
+					<nav>
+						<span class="icon nav-prev"></span>
+						<span class="icon nav-next"></span>
+						<span class="icon nav-close"></span>
+					</nav>
+					<div class="info-keys icon"><h4>Gunakan Tombol Arah Pada Keyboard</h4></div>
+				</section> <!-- // slideshow -->
+			  </div> <!-- // grid-gallery -->
+              
+              <p class="wow fadeIn" align="center"><video align="center" width="720" height="640" poster="images/videos4.png" controls>
+          <!-- video files -->
+          <source src="video4.mp4" type="video/mp4" />  
+          <!-- fallback for browsers that don't support the video element -->
+        </video></p>
+              </ul>
+			</div>
+		</section>
+        
+        
+    <!-- Footer -->
+    <section id="footer">
+        <div class="container"> <ul class="copyright">
+          <li>© 2015 // Riansyah Rizky Poetra // 12105244001 // Teknologi Pendidikan | Originally layout by <a href="https://github.com/Thames1990/Webdesign-Multimedia">Thomas Mohr</a></li>
+        </ul>
+        </div>
+    </section>
+
+    <script language="javascript" type="text/javascript">
+        setBannerHeight()
+    </script>
+	<script src="js/imagesloaded.pkgd.min.js"></script>
+	<script src="js/masonry.pkgd.min.js"></script>
+	<script src="js/classie.js"></script>
+	<script src="js/cbpGridGallery.js"></script>
+	<script>
+			new CBPGridGallery( document.getElementById( 'grid-gallery' ) );
+	</script>
+
+</div>
+</body>
+</html>

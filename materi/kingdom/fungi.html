@@ -1,0 +1,359 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<script language='JavaScript'>
+		var txt="Belajar Klasifikasi Makhluk Hidup ";
+		var kecepatan=300;var segarkan=null;function bergerak() { document.title=txt;
+		txt=txt.substring(1,txt.length)+txt.charAt(0);
+		segarkan=setTimeout("bergerak()",kecepatan);}bergerak();
+	</script>
+    <meta name="author" content="Riansyah R">
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#B0E600">
+
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/jquery.poptrox.js"></script>
+    <script src="js/jquery.scrollzer.min.js"></script>
+    <script src="js/jquery.scrolly.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-layers.min.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/banner.js"></script>
+
+    <!-- Gallery-->
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<script src="js/modernizr.custom.js"></script>
+
+    <!-- No Backspace & Double Click-->
+	<script type="text/javascript">
+	function delay (URL) {
+ 	   setTimeout( function() { window.location = URL }, 500 );
+	}
+	</script>
+    <!-- No Backspace & Double Click-->
+
+    <!-- Delay-->
+	<script type="text/javascript">
+	function delay (URL) {
+ 	   setTimeout( function() { window.location = URL }, 500 );
+	}
+	</script>
+    <!-- Delay-->
+
+    <!-- Script HTML5 SoundFX -->
+    <script>
+	var html5_audiotypes={
+	"mp3": "audio/mpeg",
+	"mp4": "audio/mp4",
+	"ogg": "audio/ogg",
+	"wav": "audio/wav"
+	}
+	function createsoundbite(sound){
+		var html5audio=document.createElement('audio')
+		if (html5audio.canPlayType){ //check support for HTML5 audio
+			for (var i=0; i<arguments.length; i++){
+				var sourceel=document.createElement('source')
+				sourceel.setAttribute('src', arguments[i])
+				if (arguments[i].match(/\.(\w+)$/i))
+					sourceel.setAttribute('type', html5_audiotypes[RegExp.$1])
+				html5audio.appendChild(sourceel)
+			}
+			html5audio.load()
+			html5audio.playclip=function(){
+				html5audio.pause()
+				html5audio.currentTime=0
+				html5audio.play()
+			}
+			return html5audio
+		}
+		else{
+			return {playclip:function(){throw new Error("Your browser doesn't support 		HTML5 audio unfortunately")}}
+		}
+	}
+	var mouseoversound=createsoundbite("sound/whistle.ogg", "sound/whistle.mp3", "sound/whistle.wav")
+	var clicksound=createsoundbite("sound/click.ogg", "sound/click.mp3", "sound/click.wav")
+	</script>
+    <!-- Script HTML5 SoundFX -->
+
+ 	<!-- Animation -->
+    <script src="js/wow.min.js"></script>
+	<script>
+		 new WOW().init();
+	</script>
+    <link rel="stylesheet" href="css/animations.css">
+ 	<!-- Animation -->
+
+    <!-- No Backspace & Double Click-->
+	<script>
+		document.onkeydown = function (event) {
+			if (!event) { /* This will happen in IE */
+				event = window.event;
+			}
+			var keyCode = event.keyCode;
+			if (keyCode == 8 &&
+				((event.target || event.srcElement).tagName != "TEXTAREA") && 
+				((event.target || event.srcElement).tagName != "INPUT")) { 
+				if (navigator.userAgent.toLowerCase().indexOf("msie") == -1) {
+					event.stopPropagation();
+				} else {
+					alert("prevented");
+					event.returnValue = false;
+				}
+				return false;
+			}
+		};	
+	</script>
+    <script type="text/javascript">
+		document.ondblclick = function(evt) {
+    		if (window.getSelection)
+        		window.getSelection().removeAllRanges();
+ 		   else if (document.selection)
+      			document.selection.empty();
+				}
+	</script>
+    <!-- No Backspace & Double Click-->
+
+    <!-- Hide n Show-->
+	<script>
+	$(document).ready(function(){
+		$("tombol").click(function(){
+			$("xyz").toggle();
+		});
+	});
+	</script>
+	<script>
+	$(document).ready(function(){
+		$("tombol1").click(function(){
+			$("xyz1").toggle();
+		});
+	});
+	</script>
+	<script>
+	$(document).ready(function(){
+		$("tombol2").click(function(){
+			$("xyz2").toggle();
+		});
+	});
+	</script>
+       
+    <!-- Hide n Show-->
+
+	<noscript>
+        <link rel="stylesheet" href="css/skel.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/style-xlarge.css"/>
+	</noscript>
+
+</head>
+<!--
+<iframe src="news.html"
+width="40%" height="80"
+align="right">
+<p>See our <a href="news.html">newsflashes</a>.</p>
+</iframe>
+-->
+
+<body oncontextmenu="return false">
+<div id="wrapper" class="wow fadeIn" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;">
+
+<section id="header" class="skel-layers-fixed wow slideInRight" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;">
+    	<header>
+            <span class="image avatar">
+                <img
+                        src="images/avatar.png"/>
+            </span>
+            <h1><a href="javascript:delay('../materi.html#one')" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()"><img src="images/menu.png" width="364" height="122" alt="Kembali Ke Menu Awal"/></a></h1>
+      </header>
+        <nav id="nav">
+            <ul>
+                <li><a href="#one" class="active" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()">Mengenal Kingdom Fungi</a></li>
+                <li><tombol1><a href="#two" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()">Organisme <em>Lichenes</em></a></tombol1></li>
+                <li><tombol2><a href="#three" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()">Organisme <em>Mycorrhizae</em></a></tombol2></li>
+                <li><tombol3><a href="#four" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()">Gallery & Video</a></tombol3></li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- Pengantar -->
+        <section id="one">
+            <div class="container">
+                    <h2 class="wow fadeInLeft" align="center">Yuk Mengenal Kingdom  Fungi</h2>
+                	<div class="features">
+                 	<p class="wow zoomIn" align="justify">Makhluk hidup dalam Kingdom Fungi adalah organisme  <em><strong>eukariota</strong></em> yang sebagian besar <em><strong>multicell</strong></em>, yaitu makhluk hidup ber-sel banyak yang memiliki membran inti. <em>Fungi</em> atau jamur merupakan organisme <em>heterotrofik</em> karena tidak memiliki klorofil, mereka memerlukan senyawa organik untuk nutrisinya. Bila mereka hidup dari benda organik mati yang terlarut, mereka disebut <em>saprofit</em>. <em>Fungi</em> memiliki berbagai macam penampilan tergantung pada spesiesnya (Pelczar, 1986). Pada umumnya, <em>Fungi</em> bersifat parasit dan saprofit, namun ada juga yang bersifat simbion dan masuk kedalam organisme baru yaitu <em>Lichenes</em> dan <em>Mycorrhizae</em>. Adapun ciri-ciri organisme <em>Fungi</em>, yaitu:</p>
+                    <ol class="wow zoomInDown">
+                         <li>Merupakan organisme <em>Eukariotik</em> atau mempunyai membran inti.</li>
+                         <li>Merupakan organisme <em>Heterotrofik </em>atau tidak mampu membuat makanannya sendiri.</li>
+                         <li>Semua <em>Fungi</em> memiliki <em>aklorofilus</em> (klorofil yang tidak berpigmen dan tidak mampu  berfotosintesis).</li>
+                         <li><em>Fungi</em> adalah organisme non-vaskular.</li>
+                         <li>Berkembang  biak dengan cara spora.</li>
+                         <li>Dapat  berperan sebagai<em> saprofit</em>, <em> parasit</em> atau <em>simbion</em>.</li>
+					</ol>
+                 	<h5 align="center" class="wow pulse" data-wow-duration="0.5s" data-wow-iteration="50" data-wow-delay="10s" align="justify"><strong>Tahukah kamu apakah itu yang dimaksud saprofit, parasit dan simbion? 
+                 	<tombol onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()"><u>Klik disini deh</u></tombol> kalau kepo :D</strong></h5>
+                    	<xyz style="display:none"><p><p align="justify">Yang dimaksud dengan <strong>saprofit</strong> adalah adalah organisme yang hidup dengan memakan  dari bahan organik dari organisme yang telah mati atau membusuk. Kemudian yang dimaksud dengan <strong>parasit</strong> adalah organisme yang hidup dengan dengan menempel dan menghisap nutrisi dari makhluk hidup yang di tempelinya, sehingga bersifat merugikan. Sedangkan <strong>simbion</strong> adalah organisme yang hidup bekerjasama dengan makhluk hidup lainnya.... WOW!! Nah nambah ilmu kan? dilanjutkan yuk mengenal lebih jauh apa sih itu organisme <em>Lichenes</em> dan <em>Mycorrhizae</em>. Silahkan pilih menu di sebelah kanan ya.</p></p></xyz>
+					</div>
+			</div>
+		</section>
+
+        <!-- Lichenes -->
+        <section id="two">
+        <xyz1 style="display:none">
+            <div class="container">
+                    <h4 class="wow fadeInLeft" align="center">&nbsp;</h4>
+                    <h2 class="wow fadeInLeft" align="center">Lichenes</h2>
+                	<div class="features" align="justify">
+                	  <p class="wow zoomIn" align="justify"><em>Lichenes</em> (liken) atau lebih dikenal dengan Lumut Kerak adalah organisme hasil penggabungan simbiosis antara  Jamur <em>Ascomycotina</em> atau <em>Basidiomycotina</em> dengan algae hijau atau algae biru, sehingga bisa dikatakan juga sebagai Fungi yang bersifat simbion. Lumut kerak dapat kita temukan pada kulit pohon dan batu-batuan. Talus liken  berbentuk tipis yang tersusun atas miselium dan hifa. Setiap liken mempunyai  bentuk dan warna serta habitat tertentu yang mempunyai ketergantungan pada  jenis-jenis dan algae yang ada. Menurut  Hasairin (2007), alga pada liken dapat hidup tanpa bersimbiosis, tapi hampir  semua jamur pada liken hanya dapat hidup jika bersimbiosis dengan alga. Contoh dari organisme <em>Lichenes</em> adalah <em>Usnea Dasypoga</em> dan   <em>Parmelia  Acetubulum</em>.</p>
+					  </div>
+                      </div>
+        	</xyz1>
+        </section>
+            
+        <!-- Mycorrhi -->
+        <section id="three"><xyz2 style="display:none">
+            <div class="container">
+                    <h4 class="wow fadeInRight" align="center">&nbsp;</h4>
+                    <h2 class="wow fadeInRight" align="center">Mycorrhizae</h2>
+                	<div class="features" align="justify">
+                	  <p class="wow zoomIn" align="justify"><em>Mycorrhizae</em> (mikoriza) merupakan organisme yang terbentuk karena adanya struktur simbiosis jamur dan akar  tumbuhan tinggi sehingga bisa dikatakan juga sebagai Fungi yang bersifat simbion. Organisme hidup ini baru ditemukan pada tahun 1885 oleh Frank asal Jerman.</p>
+                	  <p class="wow fadeInRight">Berdasarkan dari struktur anatomi<em>, Mycorrizhae</em> dapat dikelompokkan menjadi dua sebagai berikut:</p>
+                      <ol class="wow fadeInUp">
+							<li><strong>Ektomikorhiza</strong>,
+							<br>
+							Hidup antara jamur dengan tanaman pinus, apabila hifanya tidak menembus ke dalam akar tetapi hanya pada sampai lapisan epidermis. Dengan adanya ektomikorhiza akar tanaman tidak memerlukan lagi bulu-bulu akar. Melalui jamur ini tanaman dapat memperoleh air atau unsur lainnya. Jamur ini tidak dapat hidup tanpa bersimbiosis dengan akar tanaman.</li>
+							<li><strong>Endomikorhiza</strong>,
+							<br>
+							Hidup antara jamur dengan tanaman, apabila hifanya dapat menembus sampai ke dalam (korteks). Jamur ini biasanya terdapat pada tanaman anggrek, kol, bit dan beberapa jenis pohon lain. Endomikorhiza dapat hidup tanpa bersimbiosis dengan tanaman inangnya. Jamur ini membantu pertumbuhan bintil akar tanaman Leguminoceae dan mempercepat fiksasi nitrogen.</li>
+                      </ol>
+                
+              </div>
+            </div>
+        </xyz2></section>    
+        
+		<!-- Galeri -->
+        <section id="four">
+            <div class="container">
+              <h2 class="wow fadeInLeft" align="center">Gallery Foto &amp; Video</h2>
+			  <p align="center" class="wow wobble">Klik gambar dibawah ini untuk membaca deskripsi lebih lanjut</p>
+              <div id="grid-gallery" class="grid-gallery wow bounceInRight">
+				<section class="grid-wrap">
+					<ul class="grid">
+						<li>
+							<figure>
+								<img src="img/thumb/9.jpg" alt="img09"/>
+								<figcaption>
+								  <h5 align="center"><strong><em>Lichenes</em></strong></h5>
+							  <p align="center">Adalah organisme hasil penyatuan algae dengan fungi, tetapi tidak masuk pada <em>Kingdom Plantae</em>.</p>
+</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="img/thumb/10.jpg" alt="img10"/>
+								<figcaption>
+								  <h5 align="center"><strong><em>Mycorrhizae</em></strong></h5>
+							  <p align="center">Adalah organisme hasil perkembangan atau bahkan evolusi dari simbiosis antara akar pohon dengan serabut akar Fungi yang hidup didalam tanah</em>.</p></figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="img/thumb/11.jpg" alt="img11"/>
+								<figcaption>
+								  <h5 align="center"><strong><em>Lentinula Edodes</em></strong></h5>
+							  <p align="center">Dalam gambar ini adalah  Jamur Payung, bentuknya seperti jamur pada umumnya yakni memiliki ujung yang menyerupai topi, penampang atau payung.</p></figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="img/thumb/12.jpg" alt="img12"/>
+								<figcaption>
+								<h5 align="center"><em><strong>Hymenophallus Indusiatus</strong></em></h5>
+							  <p align="center">Dalam gambar ini adalah Jamur Jala, disebut juga Jamur<em></em> Jaring atau Jamur Wanita Berkerudung. Beberapa spesies jamur memang memiliki topi atau ujung yang unik.</p></figcaption>
+							</figure>
+						</li></li>
+				</section><!-- // grid-wrap -->
+				
+                <section class="slideshow">
+					<ul>
+						<li>
+							<figure>
+								<figcaption>
+									<h3 align="center">Lichenes</h3>
+									<p>Dalam gambar ini adalah Liken, yang membedakan Liken dengan lumut pada umumnya adalah organisme ini hidup pada permukaan yang kasar dan keras seperti bebatuan. Biasanya memiliki penampang luas dan terlihat kering (<em>lumut kerak</em>).</p>
+								</figcaption>
+								<img src="img/large/9.jpg" alt="img01"/>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<figcaption>
+									<h3 align="center">Mycorrhizae</h3>
+									<p>Dalam gambar ini adalah organisme hidup baru yang terbentuk karena adanya sistem simbiosis antara akar pohon dengan akar jamur.</p>
+								</figcaption>
+								<img src="img/large/10.jpg" alt="img02"/>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<figcaption>
+									<h3>Lentinula Edodes</h3>
+									<p>Ini adalah Jamur Payung sebagai salah satu contoh bentuk jamur pada umumnya yang memiliki topi segitiga melingkar. Beberapa jenis jamur sangat lezat untuk dimakan sedangkan jenis lainnya beracun sehingga berbahaya untuk dimakan bahkan disentuh!</p>
+								</figcaption>
+								<img src="img/large/11.jpg" alt="img03"/>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<figcaption>
+									<h3 align="center">Hymenophallus Indusiatus</h3>
+									<p align="center">Dalam gambar ini adalah Jamur Jala yang memiliki ujung topi jamur unik, masik banyak jenis jamur dengan penampilan yang aneh bahkan indah.</p>
+								</figcaption>
+								<img src="img/large/12.jpg" alt="img04"/>
+							</figure>
+						</li>
+					</ul>
+					<nav>
+						<span class="icon nav-prev"></span>
+						<span class="icon nav-next"></span>
+						<span class="icon nav-close"></span>
+					</nav>
+					<div class="info-keys icon"><h4>Gunakan Tombol Arah Pada Keyboard</h4></div>
+				</section> <!-- // slideshow -->
+			  </div> <!-- // grid-gallery -->
+              
+              <p class="wow fadeIn" align="center"><video align="center" width="720" height="640" poster="images/videos3.png" controls>
+          <!-- video files -->
+          <source src="video3.mp4" type="video/mp4" />  
+          <!-- fallback for browsers that don't support the video element -->
+        </video></p>
+              </ul>
+			</div>
+		</section>
+        
+        
+    <!-- Footer -->
+    <section id="footer">
+        <div class="container"> <ul class="copyright">
+          <li>© 2015 // Riansyah Rizky Poetra // 12105244001 // Teknologi Pendidikan | Originally layout by <a href="https://github.com/Thames1990/Webdesign-Multimedia">Thomas Mohr</a></li>
+        </ul>
+        </div>
+    </section>
+
+    <script language="javascript" type="text/javascript">
+        setBannerHeight()
+    </script>
+	<script src="js/imagesloaded.pkgd.min.js"></script>
+	<script src="js/masonry.pkgd.min.js"></script>
+	<script src="js/classie.js"></script>
+	<script src="js/cbpGridGallery.js"></script>
+	<script>
+			new CBPGridGallery( document.getElementById( 'grid-gallery' ) );
+	</script>
+
+</div>
+</body>
+</html>

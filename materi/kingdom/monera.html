@@ -1,0 +1,386 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<script language='JavaScript'>
+		var txt="Belajar Klasifikasi Makhluk Hidup ";
+		var kecepatan=300;var segarkan=null;function bergerak() { document.title=txt;
+		txt=txt.substring(1,txt.length)+txt.charAt(0);
+		segarkan=setTimeout("bergerak()",kecepatan);}bergerak();
+	</script>
+    <meta name="author" content="Riansyah R">
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#B0E600">
+
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/jquery.poptrox.js"></script>
+    <script src="js/jquery.scrollzer.min.js"></script>
+    <script src="js/jquery.scrolly.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-layers.min.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/banner.js"></script>
+
+    <!-- Gallery-->
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<script src="js/modernizr.custom.js"></script>
+
+    <!-- No Backspace & Double Click-->
+	<script type="text/javascript">
+	function delay (URL) {
+ 	   setTimeout( function() { window.location = URL }, 500 );
+	}
+	</script>
+    <!-- No Backspace & Double Click-->
+
+    <!-- Delay-->
+	<script type="text/javascript">
+	function delay (URL) {
+ 	   setTimeout( function() { window.location = URL }, 500 );
+	}
+	</script>
+    <!-- Delay-->
+
+    <!-- Script HTML5 SoundFX -->
+    <script>
+	var html5_audiotypes={
+	"mp3": "audio/mpeg",
+	"mp4": "audio/mp4",
+	"ogg": "audio/ogg",
+	"wav": "audio/wav"
+	}
+	function createsoundbite(sound){
+		var html5audio=document.createElement('audio')
+		if (html5audio.canPlayType){ //check support for HTML5 audio
+			for (var i=0; i<arguments.length; i++){
+				var sourceel=document.createElement('source')
+				sourceel.setAttribute('src', arguments[i])
+				if (arguments[i].match(/\.(\w+)$/i))
+					sourceel.setAttribute('type', html5_audiotypes[RegExp.$1])
+				html5audio.appendChild(sourceel)
+			}
+			html5audio.load()
+			html5audio.playclip=function(){
+				html5audio.pause()
+				html5audio.currentTime=0
+				html5audio.play()
+			}
+			return html5audio
+		}
+		else{
+			return {playclip:function(){throw new Error("Your browser doesn't support 		HTML5 audio unfortunately")}}
+		}
+	}
+	var mouseoversound=createsoundbite("sound/whistle.ogg", "sound/whistle.mp3", "sound/whistle.wav")
+	var clicksound=createsoundbite("sound/click.ogg", "sound/click.mp3", "sound/click.wav")
+	</script>
+    <!-- Script HTML5 SoundFX -->
+
+ 	<!-- Animation -->
+    <script src="js/wow.min.js"></script>
+	<script>
+		 new WOW().init();
+	</script>
+    <link rel="stylesheet" href="css/animations.css">
+ 	<!-- Animation -->
+
+    <!-- No Backspace & Double Click-->
+	<script>
+		document.onkeydown = function (event) {
+			if (!event) { /* This will happen in IE */
+				event = window.event;
+			}
+			var keyCode = event.keyCode;
+			if (keyCode == 8 &&
+				((event.target || event.srcElement).tagName != "TEXTAREA") && 
+				((event.target || event.srcElement).tagName != "INPUT")) { 
+				if (navigator.userAgent.toLowerCase().indexOf("msie") == -1) {
+					event.stopPropagation();
+				} else {
+					alert("prevented");
+					event.returnValue = false;
+				}
+				return false;
+			}
+		};	
+	</script>
+    <script type="text/javascript">
+		document.ondblclick = function(evt) {
+    		if (window.getSelection)
+        		window.getSelection().removeAllRanges();
+ 		   else if (document.selection)
+      			document.selection.empty();
+				}
+	</script>
+    <!-- No Backspace & Double Click-->
+
+    <!-- Hide n Show-->
+	<script>
+	$(document).ready(function(){
+		$("tombol").click(function(){
+			$("xyz").toggle();
+		});
+	});
+	</script>
+	<script>
+	$(document).ready(function(){
+		$("tombol1").click(function(){
+			$("xyz1").toggle();
+		});
+	});
+	</script>
+	<script>
+	$(document).ready(function(){
+		$("tombol2").click(function(){
+			$("xyz2").toggle();
+		});
+	});
+	</script>
+    <script>
+	$(document).ready(function(){
+		$("tombol3").click(function(){
+			$("xyz3").toggle();
+		});
+	});
+	</script>    
+    <!-- Hide n Show-->
+
+	<noscript>
+        <link rel="stylesheet" href="css/skel.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/style-xlarge.css"/>
+	</noscript>
+
+</head>
+<!--
+<iframe src="news.html"
+width="40%" height="80"
+align="right">
+<p>See our <a href="news.html">newsflashes</a>.</p>
+</iframe>
+-->
+
+<body oncontextmenu="return false">
+<div id="wrapper" class="wow fadeIn" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;">
+
+<section id="header" class="skel-layers-fixed wow slideInRight" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;">
+    	<header>
+            <span class="image avatar">
+                <img
+                        src="images/avatar.png"/>
+            </span>
+            <h1><a href="javascript:delay('../materi.html#one')" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()"><img src="images/menu.png" width="364" height="122" alt="Kembali Ke Menu Awal"/></a></h1>
+      </header>
+        <nav id="nav">
+            <ul>
+                <li><a href="#one" class="active" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()">Mengenal Kingdom Monera</a></li>
+                <li><tombol1><a href="#two" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()">Organisme <em>Archaebacteria</em></a></tombol1></li>
+                <li><tombol2><a href="#three" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()">Organisme <em>Eubacteria</em></a></tombol2></li>
+                <li><a href="#four" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()">Gallery & Video</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- Pengantar -->
+        <section id="one">
+            <div class="container">
+                    <h2 class="wow fadeInLeft" align="center">Yuk Mengenal Kingdom  Monera</h2>
+                	<div class="features">
+                 	<p class="wow zoomIn" align="justify">Makhluk hidup dalam Kingdom Monera adalah organisme  <em><strong>prokariota unicell</strong></em>, yaitu makhluk hidup ber-sel tunggal yang selnya tidak memiliki membran inti. Materi genetiknya berpusat pada daerah yang disebut <em>nukleoid</em> (DNA & RNA) serta <em>sitoplasma</em> yang mengandung <em>ribosom</em>. Organisme yang termasuk Monera adalah <em>Archaebacteria</em> dan <em>Eubacteria</em>. Adapun ciri-ciri organisme <em>Monera</em>, yaitu:</p>
+                    <ol class="wow zoomInDown">
+                         <li>Merupakan organisme <em>Prokariotik</em> atau tidak mempunyai membran inti.</em></li>
+                         <li>Merupakan organisme <em>Unicell</em> atau terdiri dari sel tunggal.</li>
+                         <li><em>Monera</em> berukuran sekitar 1 mikrometer (0.001mm).</li>
+                         <li>Membran  plasma terdiri dari lemak dan protein.</li>
+                     	 <li>Beberapa <em>Monera</em> memiliki rambut seperti <em>pilli</em> untuk menempel atau ekor  seperti <em>flagela</em> untuk bergerak.</li>
+                     	 <li>Sumber  nutrisi bagi organisme ini biasanya <em>fotosintesis</em> atau <em>kemosintesis</em>.</li>
+                     	 <li>Berkembang  biak dengan <em>amitosis</em> (membelah diri secara langsung).</li>
+                     	 <li> <em>Monera</em> dapat berupa <em>aerobik</em> maupun <em>anaerobik</em>.</li>
+					</ol>
+                 	<h5 align="center" class="wow pulse" data-wow-duration="0.5s" data-wow-iteration="50" data-wow-delay="15s" align="justify"><strong>Tahukah kamu apakah itu yang dimaksud aerobik dan anaerobik? <tombol onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()"><u>Klik disini deh</u></tombol> kalau kepo :D</strong></h5>
+                    	<xyz style="display:none"><p><p align="justify">Yang dimaksud dengan <strong>aerobik</strong> adalah organisme yang mampu hidup dengan memerlukan udara sedangkan <strong>anaerobik</strong> adalah organisme yang mampu hidup tanpa memerlukan udara sekalipun.... WOW!! Nah nambah ilmu kan? dilanjutkan yuk mengenal lebih jauh apa sih itu organisme <em>Archaebacteria</em> dan <em>Eubacteria</em>. Silahkan pilih menu di sebelah kanan ya.</p></p></xyz>
+					</div>
+			</div>
+		</section>
+
+        <!-- Archae -->
+        <section id="two">
+        <xyz1 style="display:none">
+            <div class="container">
+                    <h4 class="wow fadeInLeft" align="center">&nbsp;</h4>
+                    <h2 class="wow fadeInLeft" align="center">Archaebacteria</h2>
+                	<div class="features" align="justify">
+                	  <p class="wow zoomIn" align="justify"><em>Archaebacteria</em> (Latin, <em>archaio</em> = kuno) adalah kelompok bakteri yang dinding selnya tidak mengandung <em>peptidoglikan</em>, tapi membran plasmanya mengandung lipid. </p>
+                	  <p class="wow slideInRight">Berdasarkan habitatnya, <em>Archaebacteria</em> dapat dikelompokkan menjadi tiga sebagai berikut:</p>
+                      <ol class="wow fadeInDown">
+                        <li><strong>Halofilik</strong>,<br>
+                          Bakteri <em>Halofilik</em> adalah bakteri yang hidup di lingkungan yang berkadar garam tinggi, contohnya <em>Halobacterium sp</em>.</li>
+                        <li><strong>Methanogen</strong>,<br>
+                          Bakteri <em>Methanogen</em> adalah bakteri yang bersifat anaerob dan dapat menghasilkan gas metana (CH4) dari gas hydrogen dan CO2   atau asam asetat. Bakteri ini hidup di lingkungan yang memproduksi   metan, misalnya rawa-rawa, dasar kolam, atau usus binatang, contohnya:
+                        <br><em><strong>-</strong> Lachnospira multiparus</em>, organisme ini mampu menyederhanakan pectin;                          
+                        <br>
+                        <em><strong>-</strong> Ruminococcus albus</em>, organisme ini mampu menghidolisis selulosa;                          
+                        <br>
+                        <em><strong>-</strong> Succumonas amylotica</em>, memiliki kemampuan menguraikan amilum;                         
+                        <br>
+                        <strong>-</strong> <em>Methanococcus janashi</em>, penghasil gas metana (CH4);</li>
+                        <li><strong>Thermoasidofilik</strong>,<br>
+                          Bakteri <em>Thermoasidofilik</em> merupakan bakteri yang dapat hidup di   lingkungan yang mempunyai suhu dan tingkat keasaman tinggi, misalnya di   kawah vulkanik dan mata air panas. Bakteri ini bersifat kemoautotrof   yang dapat memanfaatkan H2S sebagai sumber energy seperti di kawah vulkanik. Contoh <em>Thermoasidofilik</em> adalah <em>Pyrolobus fumarii</em>  tumbuh dengan temperature optimum 106°C.</li>
+                      </ol>
+					  </div>
+                      </div>
+        	</xyz1>
+        </section>
+            
+        <!-- Eubacte -->
+        <section id="three"><xyz2 style="display:none">
+            <div class="container">
+                    <h4 class="wow fadeInRight" align="center">&nbsp;</h4>
+                    <h2 class="wow fadeInRight" align="center">Eubacteria</h2>
+                	<div class="features" align="justify">
+                	  <p class="wow zoomIn" align="justify"><em>Eubacteria</em> berasal dari awalan &ldquo;<em>eu</em>&rdquo; yang berarti sejati dan &ldquo;<em>bacteria</em>&rdquo;   yang berarti bakteri. Eubacteria adalah bakteri pada umumnya yang ada   di sekitar kita dan sering kita temui dalam kehidpan sehari-hari, kemudian <em>Eubacteria</em> dibagi lagi menjadi menjadi lima <em>phyllums</em> (kelas) disebut sebagai <em>Spirochetes,   Chlamydias, </em>Bakteri Gram Positif, <em>Cyanobacteria</em> dan <em>Proteobacteria</em>.</p>
+                	  <p class="wow fadeInRight">Berdasarkan cara mendapatkan makanan, <em>Eubacteria</em> dapat dikelompokkan menjadi empat sebagai berikut:</p>
+                      <ol class="wow fadeInUp">
+							<li><strong>Eubacteria Fotoautotrof</strong>,
+						<br>Bakteri yang mendapatkan makanan dari proses fotosintesis (ia memiliki klorofil) contohnya seperti <em>Cyanobacteria</em>.</li>
+							<li><strong>Eubacteria Fotoheterotrof</strong>,
+							<br>
+						Bakteri ini menggunakan energi cahaya untuk menghasilkan energi untuk hidupnya, jenis bakteri ini sangat jarang ditemui contohnya <em>Rhodospirillum Rubrum</em>.</br></li>
+							<li><strong>Eubacteria Kemoautotrof</strong>,
+						<br>Bakteri ini memperoleh energi dari hasil dari oksidasi senyawa anorganik. Banyak bakteri dari jenis ini yang berperan penting dalam siklus nitrogen. Ia juga sangat membantu dalam pembentukan asam amino dan protein, contohnya seperti <em>Nitrobacter</em>.</br></li>
+							<li><strong>Eubacteria Kemoheterotrof</strong>,
+						<br>Ciri khas dari bakteri ini adalah ia mengkonsumsi material organik untuk menghasilkan energi. Jenis bakteri ini banyak dikenal sebagai agen pengurai dari sisa-sisa makhluk hidup. <em>Eubacteria Kemoheterotrof</em> juga dikenal bisa menghasilkan sejenis pestisida tanah. Manusia juga banyak memanfaatkannya untuk pembuatan acar mentimun, yogurt, dan keju (<em>Lactobacillus</em>).</br></li>
+                      </ol>
+                
+              </div>
+            </div>
+        </xyz2></section>    
+        
+		<!-- Galeri -->
+        <section id="four">
+            <div class="container">
+              <h2 class="wow fadeInLeft" align="center">Gallery Foto &amp; Video</h2>
+			  <p align="center" class="wow wobble">Klik gambar dibawah ini untuk membaca deskripsi lebih lanjut</p>
+              <div id="grid-gallery" class="grid-gallery wow bounceInRight">
+				<section class="grid-wrap">
+					<ul class="grid">
+						<li>
+							<figure>
+								<img src="img/thumb/1.jpg" alt="img01"/>
+								<figcaption>
+								  <h5 align="center"><strong><em>Thermococcus
+                                  Litoralis</em></strong></h5>
+							  <p align="center">Adalah bakteri golongan<em> Archaebacteria</em> berjenis <em>Thermoasidofilik</em>.</p>
+</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="img/thumb/2.jpg" alt="img02"/>
+								<figcaption>
+								  <h5 align="center"><strong><em>e-Collie</em></strong></h5>
+							  <p align="center">Adalah bakteri golongan <em>Eubacteria</em> yang termasuk <em>Kemoautotrof</em>.</p></figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="img/thumb/3.jpg" alt="img03"/>
+								<figcaption>
+								  <h5 align="center"><strong>Koloni <em>Eubacteria</em></strong></h5>
+							  <p align="center">Dalam gambar ini adalah sekumpulan bentuk <em>Eubacteria</em> pada umumnya.</p></figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="img/thumb/4.jpg" alt="img04"/>
+								<figcaption>
+								<h5 align="center"><strong><em>Lactobacillus</em></strong></h5>
+							  <p align="center">Adalah bakteri golongan <em>Eubacteria</em> yang termasuk <em>Kemoheterotrof</em>.</p></figcaption>
+							</figure>
+						</li></li>
+				</section><!-- // grid-wrap -->
+				
+                <section class="slideshow">
+					<ul>
+						<li>
+							<figure>
+								<figcaption>
+									<h3 align="center">Thermococcus Litoralis</h3>
+									<p>Dalam gambar ini adalah bakteri Thermococcus Litoralis, biasanya ditemukan di tempat ekstrim seperti dasar samudera dengan suhu tinggi.</p>
+								</figcaption>
+								<img src="img/large/1.jpg" alt="img01"/>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<figcaption>
+									<h3 align="center">e-Collie</h3>
+									<p>Dalam gambar ini merupakan bentuk bakteri <em>e-Collie</em> ataupun organisme <em>Monera</em> pada umumnya. Bakteri ini berada dalam sistem pencernaan manusia di usus buntu berguna sebagai pembusukan sisa-sisa makanan.</p>
+								</figcaption>
+								<img src="img/large/2.jpg" alt="img02"/>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<figcaption>
+									<h3>Eubacteria</h3>
+									<p>Ini adalah salah satu contoh koloni <em>Eubacteria</em> atau sekelompok organisme <em>Monera</em> yang berkembang biak.</p>
+								</figcaption>
+								<img src="img/large/3.jpg" alt="img03"/>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<figcaption>
+									<h3 align="center"><em>Lactobacillus</em></h3>
+									<p align="center">Dalam gambar ini merupakan bentuk bakteri <em>Lactobacillus</em> yang termasuk dalam <em>Eubacteria Kemoheterofrof</em>, bakteri ini berguna dalam pembuatan fermentasi susu menjadi keju yang baik untuk kesehatan.</p>
+								</figcaption>
+								<img src="img/large/4.jpg" alt="img04"/>
+							</figure>
+						</li>
+					</ul>
+					<nav>
+						<span class="icon nav-prev"></span>
+						<span class="icon nav-next"></span>
+						<span class="icon nav-close"></span>
+					</nav>
+					<div class="info-keys icon"><h4>Gunakan Tombol Arah Pada Keyboard</h4></div>
+				</section> <!-- // slideshow -->
+			  </div> <!-- // grid-gallery -->
+              
+              <p class="wow fadeIn" align="center"><video align="center" width="720" height="640" poster="images/videos.png" controls>
+          <!-- video files -->
+          <source src="video1.mp4" type="video/mp4" />  
+          <!-- fallback for browsers that don't support the video element -->
+        </video></p>
+              </ul>
+			</div>
+		</section>
+        
+        
+    <!-- Footer -->
+    <section id="footer">
+        <div class="container"> <ul class="copyright">
+          <li>© 2015 // Riansyah Rizky Poetra // 12105244001 // Teknologi Pendidikan | Originally layout by <a href="https://github.com/Thames1990/Webdesign-Multimedia">Thomas Mohr</a></li>
+        </ul>
+        </div>
+    </section>
+
+    <script language="javascript" type="text/javascript">
+        setBannerHeight()
+    </script>
+	<script src="js/imagesloaded.pkgd.min.js"></script>
+	<script src="js/masonry.pkgd.min.js"></script>
+	<script src="js/classie.js"></script>
+	<script src="js/cbpGridGallery.js"></script>
+	<script>
+			new CBPGridGallery( document.getElementById( 'grid-gallery' ) );
+	</script>
+
+</div>
+</body>
+</html>
