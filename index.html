@@ -1,0 +1,330 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <embed loop="false" src="sound/index.mp3" hidden="true" type="audio/mpeg"></embed>
+    
+    <!-- Title Bar-->
+	<script language='JavaScript'>
+		var txt="Belajar Klasifikasi Makhluk Hidup ";
+		var kecepatan=300;var segarkan=null;function bergerak() { document.title=txt;
+		txt=txt.substring(1,txt.length)+txt.charAt(0);
+		segarkan=setTimeout("bergerak()",kecepatan);}bergerak();
+	</script>
+    <meta name="author" content="Riansyah R">
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#4ACAA8">
+    <!-- Title Bar-->
+
+    <!-- Confirmation-->
+    <script type="text/javascript">
+      window.prompt = function() {
+          return "Apakah kamu yakin ingin keluar dari Program ini?"
+		            return "Apakah kamu yakin ingin keluar dari Program ini?"
+
+      }
+    </script>
+    <!-- Confirmation-->
+
+    <!-- No Backspace & Double Click-->
+	<script>
+		document.onkeydown = function (event) {
+			if (!event) { /* This will happen in IE */
+				event = window.event;
+			}
+			var keyCode = event.keyCode;
+			if (keyCode == 8 &&
+				((event.target || event.srcElement).tagName != "TEXTAREA") && 
+				((event.target || event.srcElement).tagName != "INPUT")) { 
+				if (navigator.userAgent.toLowerCase().indexOf("msie") == -1) {
+					event.stopPropagation();
+				} else {
+					alert("prevented");
+					event.returnValue = false;
+				}
+				return false;
+			}
+		};	
+	</script>
+    <script type="text/javascript">
+		document.ondblclick = function(evt) {
+    		if (window.getSelection)
+        		window.getSelection().removeAllRanges();
+ 		   else if (document.selection)
+      			document.selection.empty();
+				}
+	</script>
+    <!-- No Backspace & Double Click-->
+
+    <!-- Delay-->
+	<script type="text/javascript">
+	function delay (URL) {
+ 	   setTimeout( function() { window.location = URL }, 500 );
+	}
+	</script>
+    <!-- Delay-->
+    
+    <!-- Base Style-->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <style type="text/css" src="css/animations.css"></style>
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/jquery.poptrox.js"></script>
+    <script src="js/jquery.scrollzer.min.js"></script>
+    <script src="js/jquery.scrolly.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-layers.min.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/banner.js"></script>
+    <!-- Base Style-->
+    
+ 	<!-- Audio BGM -->
+    <audio id="myAudio"
+		<source src="sound/test.mp3" type='audio/mpeg'>
+	</audio>
+	<script>
+		function aud_play() {
+		  var myAudio = document.getElementById("myAudio");
+ 			 if (myAudio.paused) {
+  			  myAudio.play();
+  				} else {
+  			  myAudio.pause();
+ 			 }
+		}
+	</script>
+ 	<!-- Audio BGM -->
+    
+ 	<!-- Animation -->
+    <script src="js/wow.min.js"></script>
+	<script>
+		 new WOW().init();
+	</script>
+    <link rel="stylesheet" href="css/animations.css">
+ 	<!-- Animation -->
+    
+ 	<!-- Script & Style Popup -->
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('a.close').click(function(eve){
+				eve.preventDefault();
+				$(this).parents('div.popup').fadeOut('slow');
+			});
+		});
+	</script>
+	<style type="text/css">
+	body{
+		width:auto;
+		height:auto;
+		margin:auto;
+		padding:auto;
+	}
+	div.popup{
+		position:fixed;
+		top:0;
+		bottom:0;
+		left:0;
+		right:0;
+		width:auto;
+		height:auto;
+		background: rgba(0,0,0,.85);
+	}
+	div#box{
+		margin:5% auto;
+		background-color:transparent;
+		alignment-adjust:middle;
+		width:30%;
+		height:30%;
+	}
+	a.close{
+		text-decoration:none;
+		color:#fff;
+		margin:10px 15px 0 0;
+		float:center;
+		font-family:tahoma;
+		font-size:20px;
+	}
+	</style>
+ 	<!-- Script & Style Popup -->
+    
+    <!-- Script HTML5 SoundFX -->
+    <script>
+	var html5_audiotypes={
+	"mp3": "audio/mpeg",
+	"mp4": "audio/mp4",
+	"ogg": "audio/ogg",
+	"wav": "audio/wav"
+	}
+	function createsoundbite(sound){
+		var html5audio=document.createElement('audio')
+		if (html5audio.canPlayType){ //check support for HTML5 audio
+			for (var i=0; i<arguments.length; i++){
+				var sourceel=document.createElement('source')
+				sourceel.setAttribute('src', arguments[i])
+				if (arguments[i].match(/\.(\w+)$/i))
+					sourceel.setAttribute('type', html5_audiotypes[RegExp.$1])
+				html5audio.appendChild(sourceel)
+			}
+			html5audio.load()
+			html5audio.playclip=function(){
+				html5audio.pause()
+				html5audio.currentTime=0
+				html5audio.play()
+			}
+			return html5audio
+		}
+		else{
+			return {playclip:function(){throw new Error("Your browser doesn't support 		HTML5 audio unfortunately")}}
+		}
+	}
+	var mouseoversound=createsoundbite("sound/whistle.ogg", "sound/whistle.mp3", "sound/whistle.wav")
+	var clicksound=createsoundbite("sound/click.ogg", "sound/click.mp3", "sound/click.wav")
+	</script>
+    <!-- Script HTML5 SoundFX -->
+
+	<noscript>
+        <link rel="stylesheet" href="css/animations.css"/>
+        <link rel="stylesheet" href="css/skel.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/style-xlarge.css"/>
+	</noscript>
+
+</head>
+
+<!--
+<iframe src="news.html"
+width="40%" height="80"
+align="right">
+<p>See our <a href="news.html">newsflashes</a>.</p>
+</iframe>
+-->
+
+<body oncontextmenu="return false">
+<div id="wrapper" class="wow fadeIn" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;">
+
+	<!-- bagian popup -->
+	<div class="popup">
+	<div id="box">
+	<p>&nbsp;</p>
+	<h1 align="center"><a class="close" href="#"><img src="images/kmh.png" width="100%" height="auto"/></a></h1>
+	<p>&nbsp;</p>
+	<h1 align="center">KLIK GAMBAR DIATAS UNTUK MELANJUTKAN</h1>
+	</div>		
+	</div>
+	<!-- akhir dari popup -->
+    
+    <!-- Header -->
+<section id="header" class="skel-layers-fixed wow slideInRight" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;">    	
+		<header>
+        	<span class="image avatar">
+                <img src="images/avatar.png"/>
+            </span>
+            <h1><img src="images/menu.png" width="364" height="122" alt=""/></h1>
+		</header>
+    <!-- Header -->
+    
+        <nav id="nav">
+            <ul>
+                <li><a href="#one" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()">Petunjuk Penggunaan</a></li>
+                <li><a href="#two" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()">Isi Media</a></li>
+                <li><a href="#" onmouseover="mouseoversound.playclip()" onclick="aud_play()">▶ Play Music / ❚❚ Pause Music</a></li>
+           </ul>
+        </nav>
+    </section>
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- Pengantar -->
+        <section id="one">
+            <div class="container">
+                    <h2 align="center">Sebelum Belajar</h2>
+                    <h2 align="center"> Mari Membaca Cara Penggunaan Media Ini :)</h2>
+              <p align="center">&nbsp;</p>
+                <div class="features">
+                  <p align="justify">Cara pakai media ini gampang kok, yuk disimak....</p>
+                        <ol>
+                          <li>Nyalakan dahulu komputer atau laptop kamu.</li>
+                          <li>Masukkan CD Interaktif IPA ini kedalam CD/DVD ROM kamu.</li>
+                          <li>Pada komputer atau laptop, buka My Computer kemudian double klik pada drive BELAJAR (CD).</li>
+                          <li>Kemudian klik shortcut icon <img src="images/icon.png" width="30" height="31" alt="icon"/> bertuliskan Mulai. </li>
+                          <li>Untuk  mengakses konten, kamu bisa menggunakan:<br> 
+                            - Tombol keyboard arah atas <img src="images/up.png" width="30" height="29" alt="icon"/> <br> 
+                            - Tombol keyboard arah bawah <img src="images/down.png" width="30" height="29" alt="icon"/> <br>
+                            - Tombol klik kiri <img src="images/lmb.png" width="30" height="31" alt="icon"/> pada mouse.<br>
+                           - Atau tombol scroll <img src="images/scroll.png" width="30" height="31" alt="icon"/> pada mouse.</li>
+                          <li>Instruksi atau tombol keluar ada di bagian terakhir dari program ini yaitu di Evaluasi dan Profil Pengembang.</li>
+                          <li>Dalam program multimedia interaktif ini terdapat tombol-tombol navigasi yang terletak di sebelah kanan halaman.</li>
+                          <li>Selain itu juga terdapat halaman-halaman lainnya yaitu:</li>
+                        </ol>
+                        <article>
+                                <div class="features">
+                                <p class="wow bounceInRight" data-wow-delay="500ms" align="center"><img src="images/pengantar/1.jpg"/></p>
+                                <p class="wow bounceInUp" data-wow-delay="500ms" align="center">Saat tampilan halaman pembuka atau cover, klik logo untuk melanjutkan.</p>
+                          		</div>
+                  </article>
+                        <article>
+                          <div class="features">
+                                <p class="wow bounceInLeft" data-wow-delay="500ms" align="center"><img src="images/pengantar/2.jpg"/></p>
+                                <p class="wow bounceInUp" data-wow-delay="500ms"  align="center">Kemudian akan muncul halaman petunjuk penggunaan (halaman ini), nah kamu bisa scroll kebawah melanjutkan membaca petunjuk sampai selesai.</p>
+                          </div>
+                        </article>
+                        <article>
+                                <div class="features">
+                                <p class="wow bounceInRight" data-wow-delay="500ms" align="center"><img src="images/pengantar/3.jpg"/></p>
+                                <p class="wow bounceInUp" data-wow-delay="500ms"  align="center">Nah dibawah halaman ini ada tombol-tombol menu yang bisa kamu coba kunjungi salah satunya kompetensi. Didalamnya terdapat indikator alias syarat materi yang harus kamu kuasai dari media ini.</p>
+                            </div>
+                        </article>
+                        <article>
+                                <div class="features">
+                                <p class="wow bounceInLeft" data-wow-delay="500ms" align="center"><img src="images/pengantar/4.jpg"/></p>
+                                <p class="wow bounceInUp" data-wow-delay="500ms"  align="center">Selanjutnya ada halaman materi, berisi materi-materi yang hendak kamu pelajari. Disana terdapat banyak ilmu baru lho, penasaran? baca dahulu ya petunjuk ini sampai selesai.</p>
+                            </div>
+                        </article>
+                        <article>
+                                <div class="features">
+                                <p class="wow bounceInRight" data-wow-delay="500ms" align="center"><img src="images/pengantar/5.jpg"/></p>
+                                <p class="wow bounceInUp" data-wow-delay="500ms"  align="center">Setelah materi, ada juga halaman evaluasi. Di dalamnya kamu bisa mencoba mengukur sendiri hasil belajar kamu dengan soal-soal yang ada.</p>
+                            </div>
+                        </article>
+                        <article>
+                                <div class="features">
+                                <p class="wow bounceInLeft" data-wow-delay="500ms" align="center"><img src="images/pengantar/6.jpg"/></p>
+                                <p class="wow bounceInUp" data-wow-delay="500ms"  align="center">Yang terakhir ada halaman profil pengembang, berisi tentang siapa sih sosok dibalik pembuatan media ini :D. Di dalamnya juga ada kontak yang dapat dihubungi apabila mengalami kendala ataupun saran-saran seputar media ini.</p>
+                            </div>
+                        </article>
+                </div>
+            </div>
+        </section>
+
+		<section id="two">
+            <div class="container wow fadeInUp"  data-wow-delay="500ms">
+                   <h2 align="center">Nah, sudah tahu kan cara menggunakan media ini?</h2>
+              <h2 align="center">Yuk langsung aja pilih menu dibawah ini :D</h2>
+              <p align="center">&nbsp;</p>
+					<article>
+                      <ul class="feature-icons">
+                            <li><a href="javascript:delay('kompetensi/kompetensi.html#one')" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()"><img src="images/index/kompetensi.png" width="250" height="84"/></a></li>
+                            <li><a href="javascript:delay('materi/materi.html#one')" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()"><img src="images/index/materi.png" width="250" height="84"/></a></li>
+                            <li><a href="javascript:delay('evaluasi/evaluasi.html#one')" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()"><img src="images/index/evaluasi.png" width="250" height="84"/></a></li>
+                            <li><a href="javascript:delay('profil/profil.html#one')" onmouseover="mouseoversound.playclip()" onClick="clicksound.playclip()"><img src="images/index/profil.png" width="250" height="84"/></a></li>
+                      </ul>
+                    </article>
+			</div>
+	</section>
+
+    <!-- Footer -->
+    <section id="footer">
+        <div class="container"> <ul class="copyright">
+          <li>© 2015 // Riansyah Rizky Poetra // 12105244001 // Teknologi Pendidikan | Originally layout by <a href="https://github.com/Thames1990/Webdesign-Multimedia">Thomas Mohr</a></li>
+        </ul>
+        </div></
+    </section>
+
+    <script language="javascript" type="text/javascript">
+        setBannerHeight()
+    </script>
+
+</section>
+</div>
+</div>
+</body>
+</html>
